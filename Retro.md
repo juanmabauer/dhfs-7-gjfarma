@@ -55,3 +55,23 @@
 
 ### Dejar de hacer
 - Confiarnos con el tiempo de entrega.
+
+-----------------------------------------------
+
+## Retro Sprint 4
+
+### Comenzar a hacer
+- 
+
+### Hacer más
+- 
+
+### Continuar haciendo
+- Dividir tareas.
+- Trabajar colaborativamente.
+
+### Hacer menos
+- 
+
+### Dejar de hacer
+- 
