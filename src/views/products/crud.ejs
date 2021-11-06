@@ -4,6 +4,7 @@
 
     <body>
         <%- include('../partials/header') %>
+        <div class="main-container">
             <div class="wrapper-container">
                 <div class="first-lane">
                     <h1>Listado de productos</h1>
@@ -35,9 +36,9 @@
                             <%- include('../partials/crudProduct',{product}) %>
                         <% })%>
                     </table>
-
                 </div>
             </div>
+        </div>
             <%- include('../partials/footer') %>
 
     </body>

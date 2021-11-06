@@ -6,8 +6,8 @@
 }
 
 .first-lane {
-    margin-top: 50px;
     margin-bottom: 10px;
+    padding-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -68,7 +68,6 @@
 .table-crud{
     width: 80%;
     margin-left: 20px;
-    margin-bottom: 30px;
 }
 .thead-crud {
     background-color: #faab05;

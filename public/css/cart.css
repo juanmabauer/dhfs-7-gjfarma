@@ -144,7 +144,7 @@ thead {
 
 .main-container{
     background-color: var(--color-white-cold);
-    padding-bottom: 150px;
+    padding-bottom: 100px;
 }    
 @media (min-width: 576px) {
     .promo-bar {
