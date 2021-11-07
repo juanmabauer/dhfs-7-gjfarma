@@ -8,7 +8,7 @@
                     </div>
                 </a>
             </div>
-            <a class='logo' href="/"><img src="/images/logo-gnjfarma.png"></a>
+            <a class='logo' href="/"><img src="/images/logo-gjfarma.jpg"></a>
             <div class="search-bar">
                 <input type="text" class="searchTerm" placeholder="Buscar">
                 <button type="submit" class="searchButton">
@@ -33,13 +33,18 @@
             <%- include('../partials/headerBurgerMenuCategory', {title: "Limpieza"}) %>
         </div>
         <br>
+    </div>
         <nav>
-            <ul class='categories'>
-                <%- include('../partials/headerMenuCategory', {title: "Salud"}) %>
-                <%- include('../partials/headerMenuCategory', {title: "Belleza"}) %>
-                <%- include('../partials/headerMenuCategory', {title: "Limpieza"}) %>
-            </ul>
+            <div class="categories-wrapper">
+                <div class="wrapper-container">
+                <ul class='categories'>
+                    <%- include('../partials/headerMenuCategory', {title: "Salud"}) %>
+                    <%- include('../partials/headerMenuCategory', {title: "Belleza"}) %>
+                    <%- include('../partials/headerMenuCategory', {title: "Limpieza"}) %>
+                </ul>
+                </div>
+            </div>
         </nav>
 
-    </div>
+   
 </header>

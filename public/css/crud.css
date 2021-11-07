@@ -101,3 +101,9 @@
     color: black;
     font-weight: normal;
 }
+
+.trash-button{
+    background-color: rgb(209, 9, 9);
+    border: none;
+    font-size: 17px;
+}

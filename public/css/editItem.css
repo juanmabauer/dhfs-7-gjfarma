@@ -3,15 +3,7 @@
     margin: 20px 40px;
 }
 
-.form-container {
-    background-color: rgb(197, 213, 255);
-    width: 40%;
-    margin: auto;
-    margin-top: 50px;
-    padding: 10px 0;
-    border-radius: 15px;
-    margin-bottom: 30px;
-}
+
 
 .form-unitary {   
     margin-bottom: 15px;
@@ -32,12 +24,7 @@
     vertical-align: top;
     width: 90%;
 }
-textarea {
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    width: 90%;
-}
+
 
 select{
     height: 2.8vh;

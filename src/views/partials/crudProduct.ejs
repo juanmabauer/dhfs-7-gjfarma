@@ -10,10 +10,10 @@
                     <i class="fas fa-edit"></i>
                 </a>
         </form>
-        <form action="" class="delete-product" method="POST">
-            <a href="/products/deleteItem/<%= product.id %>">
+        <form action="/products/delete/<%= product.id %>?_method=DELETE" class="delete-product" method="POST">
+            <button type="submit" class="trash-button">
                 <i class="fas fa-trash-alt"></i>
-            </a>
+            </button>
         </form>
     </td>
 </tr>

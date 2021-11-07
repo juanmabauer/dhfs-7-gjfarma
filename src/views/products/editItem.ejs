@@ -1,62 +1,65 @@
 <%- include('../partials/head', {'title': 'Editar producto' }) %>
 <body>
     <%- include('../partials/header') %>
-    <form action="/products/editItem/<%= product.id %>?_method=PUT" class="form-container" method="POST" enctype="multipart/form-data">
-        <div class="title">
-            <h1>Editar producto</h1>
-        </div>
-        <div class="form-block">
-            <div class="first-block">
-                <div class="form-unitary">
-                    <label for="product name">Nombre del producto</label>
-                    <input type="text" name="name" id="product name" value="<%= product.name %>" required>
+    <div class="main-container">
+        <form action="/products/editItem/<%= product.id %>?_method=PUT" class="form-container" method="POST" enctype="multipart/form-data">
+            <div class="title">
+                <h1>Editar producto</h1>
+            </div>
+            <div class="form-block">
+                <div class="first-block">
+                    <div class="form-unitary">
+                        <label for="product name">Nombre del producto</label>
+                        <input type="text" name="name" id="product name" value="<%= product.name %>" required>
+                    </div>
+                    <div class="form-unitary">
+                        <label for="brand name">Marca</label>
+                        <input type="text" name="brand" id="brand name" value="<%= product.brand %>" required>
+                    </div>
+                    <div class="form-unitary">
+                        <label for="img">Imágen</label>
+                        <input type="file" name="image" id="img" value="<%= product.image %>" accept="image/*">
+                    </div>
+                
                 </div>
-                <div class="form-unitary">
-                    <label for="brand name">Marca</label>
-                    <input type="text" name="brand" id="brand name" value="<%= product.brand %>" required>
-                </div>
-                <div class="form-unitary">
-                    <label for="img">Imágen</label>
-                    <input type="file" name="image" id="img" value="<%= product.image %>" accept="image/*">
-                </div>
-                <div class="form-unitary">
-                    <label class="description" for="description">Descripción</label>
-                    <textarea name="description" id="description" cols="30" rows="5" required><%= product.description%></textarea>
+                <div class="second-block">
+                    <div class="form-unitary">
+                        <label>Categoría del producto</label>
+                        <select name="category" required>
+                            <option selected >Elige una opción</option>
+                                <%
+                                    var selected = ( product.category == "Salud" ) ? "selected" : ""
+                                %>
+                                <option value="Salud" <%= selected%>>Salud</option>
+                                <%
+                                    selected = ( product.category == "Belleza" ) ? "selected" : ""
+                                %>
+                                <option value="Belleza" <%= selected%>>Belleza</option>
+                                <%
+                                    selected = ( product.category == "Limpieza" ) ? "selected" : ""
+                                %>
+                                <option value="Limpieza" <%= selected%>>Limpieza</option>
+                        </select>
+                    </div>
+                    <div class="form-unitary">
+                        <label for="stock">Stock</label>
+                        <input type="text" name="stock" id="stock" value="<%= product.stock %>" required>
+                    </div>
+                    <div class="form-unitary">
+                        <label for="product price">Precio unitario</label>
+                        <input type="text" name="price" id="product price" value="<%= product.price %>" required>
+                    </div>
                 </div>
             </div>
-            <div class="second-block">
-                <div class="form-unitary">
-                    <label>Categoría del producto</label>
-                    <select name="category" required>
-                        <option selected >Elige una opción</option>
-                            <%
-                                var selected = ( product.category == "Salud" ) ? "selected" : ""
-                            %>
-                            <option value="Salud" <%= selected%>>Salud</option>
-                            <%
-                                selected = ( product.category == "Belleza" ) ? "selected" : ""
-                            %>
-                            <option value="Belleza" <%= selected%>>Belleza</option>
-                            <%
-                                selected = ( product.category == "Limpieza" ) ? "selected" : ""
-                            %>
-                            <option value="Limpieza" <%= selected%>>Limpieza</option>
-                    </select>
-                </div>
-                <div class="form-unitary">
-                    <label for="stock">Stock</label>
-                    <input type="text" name="stock" id="stock" value="<%= product.stock %>" required>
-                </div>
-                <div class="form-unitary">
-                    <label for="product price">Precio unitario</label>
-                    <input type="text" name="price" id="product price" value="<%= product.price %>" required>
-                </div>
+            <div class="form-unitary">
+                <label class="description" for="description">Descripción</label>
+                <textarea name="description" id="description" cols="30" rows="5" required><%= product.description%></textarea>
             </div>
-        </div>
-        <div class="buttons-editItem">
-            <a href="/crud"><button class="edit" type="submit">Grabar</button></a>
-            <button class="delete" type="submit">Cancelar</button>
-        </div>
-    </form>
+            <div class="buttons-editItem">
+                <button class="delete" type="submit">Cancelar</button>
+                <a href="/crud"><button class="edit" type="submit">Grabar</button></a>
+            </div>
+        </form>
+    </div>
     <%- include('../partials/footer') %>
 </body>

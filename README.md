@@ -1,4 +1,4 @@
-# Gnjfarma
+# Gjfarma
 
 GnjFarma es una empresa que ofrece una amplia variedad de productos de belleza, dermocosmética, higiene personal, ciudado del bebé, entre otros. 
 Nuestro principal objetivo es hacer que tus compras sean más fáciles, ágiles y convenientes. 
@@ -23,9 +23,6 @@ Hemos elegido los sitios más utilizados hoy en día en el ámbito e-commerce ar
 
 
 ### Bio del equipo
-
-* **Nahuel Hernandez:** Trabaja actualmente como Arquitecto Cloud ayudando a crear sistemas que puedan escalar bajo demanda, y sean tolerantes a fallas. También es profesor de metodologías DevOps, y es apasionado por automatizar todo tipo de tareas.
-  En su tiempo libre le gusta viajar, conocer otras culturas, y hacer deporte.
 
 * **Gina Lucía Stortoni:** Es contadora pública, trabaja en una empresa petrolera y actualmente se encuentra estudiando programación web full Stack para poder buscar otro camino profesional.
   Amante de los perros y la comida compartida, su filosofía de vida es: “Viajar para vivir”.

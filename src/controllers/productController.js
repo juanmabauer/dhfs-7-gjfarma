@@ -69,12 +69,6 @@ let controller = {
 
         res.redirect('/products/crud')
     },
-    deleteItem:(req,res)=>{
-        let productDelete = products.find(product => {
-            return product.id == req.params.id;
-        })
-        res.render('products/deleteItem', {product: productDelete})
-    },
     delete: (req,res)=>{
         let restProducts= products.filter(product=>{
             return product.id!=req.params.id;

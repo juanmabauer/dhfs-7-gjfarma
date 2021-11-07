@@ -28,8 +28,8 @@ router.put('/editItem/:id',upload.single('image'), controller.update);
 router.get('/addItem', controller.addItem);
 router.post('/addItem', upload.single('image'), controller.store);
 
-router.get('/deleteItem/:id', controller.deleteItem);
-router.delete('/deleteItem/:id',upload.single('image'), controller.delete);
+
+router.delete('/delete/:id',upload.single('image'), controller.delete);
 
 
 module.exports = router;

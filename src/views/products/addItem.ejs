@@ -2,53 +2,57 @@
 
     <body>
         <%- include('../partials/header') %>
-            <form action="" class="form-container" method="POST" enctype="multipart/form-data">
-                <div class="title">
-                    <h1>Añadir producto</h1>
-                </div>
-                <div class="form-block">
-                    <div class="first-block">
-                        <div class="form-unitary">
-                            <label for="product name">Nombre del producto</label>
-                            <input type="text" name="name" id="product name" required>
+            <div class="main-container">
+                <form action="" class="form-container" method="POST" enctype="multipart/form-data">
+                    <div class="title">
+                        <h1>Añadir producto</h1>
+                    </div>
+                    <div class="form-block">
+                        <div class="first-block">
+                            <div class="form-unitary">
+                                <label for="product name">Nombre del producto</label>
+                                <input type="text" name="name" id="product name" required>
+                            </div>
+                            <div class="form-unitary">
+                                <label for="brand name">Marca</label>
+                                <input type="text" name="brand" id="brand name" required>
+                            </div>
+                            <div class="form-unitary">
+                                <label for="img">Imágen</label>
+                                <input type="file" name="image" id="img" accept="image/*">
+                            </div>
+
                         </div>
-                        <div class="form-unitary">
-                            <label for="brand name">Marca</label>
-                            <input type="text" name="brand" id="brand name" required>
-                        </div>
-                        <div class="form-unitary">
-                            <label for="img">Imágen</label>
-                            <input type="file" name="image" id="img" accept="image/*">
-                        </div>
-                        <div class="form-unitary">
-                            <label class="description" for="description">Descripción</label>
-                            <textarea name="description" id="description" cols="30" rows="5" required></textarea>
+
+                        <div class="second-block">
+                            <div class="form-unitary">
+                                <label>Categoría del producto</label>
+                                <select name="category" required>
+                                    <option selected value="0">Elige una opción</option>
+                                    <option value="Salud">Salud</option>
+                                    <option value="Belleza">Belleza</option>
+                                    <option value="Limpieza">Limpieza</option>
+                                </select>
+                            </div>
+                            <div class="form-unitary">
+                                <label for="stock">Stock</label>
+                                <input type="text" name="stock" id="stock" required>
+                            </div>
+                            <div class="form-unitary">
+                                <label for="product price">Precio unitario</label>
+                                <input type="text" name="price" id="product price" required>
+                            </div>
                         </div>
                     </div>
-                    <div class="second-block">
-                        <div class="form-unitary">
-                            <label>Categoría del producto</label>
-                            <select name="category" required>
-                                <option selected value="0">Elige una opción</option>
-                                <option value="Salud">Salud</option>
-                                <option value="Belleza">Belleza</option>
-                                <option value="Limpieza">Limpieza</option>
-                            </select>
-                        </div>
-                        <div class="form-unitary">
-                            <label for="stock">Stock</label>
-                            <input type="text" name="stock" id="stock" required>
-                        </div>
-                        <div class="form-unitary">
-                            <label for="product price">Precio unitario</label>
-                            <input type="text" name="price" id="product price" required>
-                        </div>
+                    <div class="form-unitary">
+                        <label class="description" for="description">Descripción</label>
+                        <textarea name="description" id="description" cols="30" rows="5" required></textarea>
                     </div>
-                </div>
-                <div class="buttons-addItem">
-                    <a href="/crud"><button class="add" type="submit">Grabar</button></a>
-                    <button class="delete" type="submit">Cancelar</button>
-                </div>
-            </form>
+                    <div class="buttons-addItem">
+                        <button class="delete" type="submit">Cancelar</button>
+                        <a href="/crud"><button class="add" type="submit">Grabar</button></a>
+                    </div>
+               </form>
+            </div>
             <%- include('../partials/footer') %>
     </body>

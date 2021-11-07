@@ -9,7 +9,8 @@ header{
 	margin: 0;
 }
 .logo{
-	width: 130px;
+	margin-top: 5px;
+	width: 190px;
 	display: inline-block;
 }
 .logo img{
@@ -67,7 +68,7 @@ nav ul{
 	list-style: none;
 	position: relative;
 	float: center;
-	display: inline-table;
+	display: inline-flex;
 }
 nav ul li{
 	float: left;
@@ -76,7 +77,8 @@ nav ul li{
 	transition: all .2s ease-in-out;
 }
 
-nav ul li:hover{background: rgba(0,0,0,.15);}
+nav ul li:hover{background: var(--color-white-cold);}
+nav a:hover{color: black;}
 nav ul li:hover > ul{display: block;}
 nav ul li{
 	float: left;
@@ -93,18 +95,7 @@ nav ul li a{
 	text-decoration: none;
 	text-transform: uppercase;
 }
-.fa-angle-down, .fa-angle-up{
-	color: var(--color-black);
-}
-.fa-angle-up{
-	display: none;
-}
-nav .category:hover > .fa-angle-up{
-	display: inline-block;
-}
-nav li:hover > .fa-angle-down{
-	display: none;
-}
+
 nav ul ul{
 	display: none;
 	background: #fff;
@@ -175,4 +166,8 @@ nav ul ul ul {
 .burger-menu{
 	cursor: pointer;
 	padding: 10px;
+}
+.categories-wrapper{
+	width: 100%;
+	background-color: var(--color-black);
 }
