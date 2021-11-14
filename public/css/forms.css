@@ -63,3 +63,7 @@
 .form-login label{
   color: var(--color-black);
 }
+
+.text-danger{
+  color: red;
+}

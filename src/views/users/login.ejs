@@ -7,15 +7,27 @@
     <%- include('../partials/header') %>
 
         <section class="form-login">
-            <h5>Ingresa a tu cuenta</h5>
-            <input class="controls" type="text" name="mail" value="" placeholder="Mail">
-            <input class="controls" type="password" name="clave" value="" placeholder="Contraseña">
-            <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label>Recordarme</label>
-            <br>
-            <br>
-            <input class="buttons" type="submit" value="Ingresar" name="ingresar" onclick="lsRememberMe()">
-            <p><a href="#">¿Olvidaste tu Contraseña?</a></p>
-            <p><a href="/users/register">Crea tu cuenta</a></p>
+            <form action="/users/login" method="POST">
+                <h5>Ingresa a tu cuenta</h5>
+                <input class="controls" type="text" name="email" value="" placeholder="Email">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
+                <input class="controls" type="password" name="password" value="" placeholder="Contraseña">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.password.msg %>
+                    </div>
+                <% } %>
+                <input type="checkbox" value="lsRememberMe" id="remember" name="remember"> <label>Recordarme</label>
+                <br>
+                <br>
+                <button class="buttons" type="submit" name="login">Ingresar</button>
+                <p><a href="#">¿Olvidaste tu Contraseña?</a></p>
+                <p><a href="/users/register">Crea tu cuenta</a></p>
+            </form>
         </section>
 
     <%- include('../partials/footer') %> 

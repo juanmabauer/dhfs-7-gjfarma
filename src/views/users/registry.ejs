@@ -7,14 +7,64 @@
     <%- include('../partials/header') %>
         <section class="form-login">
             <h5>Te pedimos que ingreses tus datos:</h5>
-            <input class="controls" type="text" name="name" value="" placeholder="Nombre">
-            <input class="controls" type="text" name="lastname" value="" placeholder="Apellido">
-            <input class="controls" type="email" name="mail" value="" placeholder="Mail">
-            <input class="controls" type="password" name="clave" value="" placeholder="Contraseña">
-            <input class="controls" type="password" name="repetir-clave" value="" placeholder="Repetir contraseña">
-            <input class="buttons" type="submit" value="Crear Cuenta" name="crear-cuenta">
-            <p><a href="/users/login">Registrate</a></p>
+            <form method="POST" action="/users/register" enctype="multipart/form-data">
+                <input 
+                    type="text" 
+                    name="name" 
+                    class="controls <%= locals.errors && errors.name ? 'is-invalid' : null %>" 
+                    value="<%= locals.oldData ? oldData.name : null %>" 
+                    placeholder="Nombre">
+                <% if (locals.errors && errors.name) { %>
+                    <div class="text-danger">
+                        <%= errors.name.msg %> 
+                    </div>
+                   <% } %>
+                <input 
+                    type="text" 
+                    name="lastname" 
+                    class="controls <%= locals.errors && errors.lastname ? 'is-invalid' : null %>" 
+                    value="<%= locals.oldData ? oldData.lastname : null %>" 
+                    placeholder="Apellido">
+                <% if (locals.errors && errors.lastname) { %>
+                    <div class="text-danger">
+                        <%= errors.lastname.msg %> 
+                    </div>
+                   <% } %>
+                <input 
+                    type="email" 
+                    name="email" 
+                    class="controls <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
+                    value="<%= locals.oldData ? oldData.email : null %>" 
+                    placeholder="Email">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %> 
+                    </div>
+                   <% } %>
+                <input 
+                    type="password" 
+                    name="password" 
+                    class="controls <%= locals.errors && errors.password ? 'is-invalid' : null %>" 
+                    value="" 
+                    placeholder="Contraseña">
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger">
+                        <%= errors.password.msg %> 
+                    </div>
+                   <% } %>
+                <input 
+                    type="file" 
+                    name="avatar" 
+                    class="controls" 
+                    value="">
+                    <% if (locals.errors && errors.avatar) { %>
+                        <div class="text-danger">
+                            <%= errors.avatar.msg %> 
+                        </div>
+                       <% } %>
+                    <button class="buttons" type="submit" name="crear">Crear cuenta</button>
+                <p><a href="/users/login">Registrate</a></p>
+            </form>
         </section>
-
      <%- include('../partials/footer') %>
 </body>

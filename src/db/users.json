@@ -1,42 +1,29 @@
 [
-    {
-        "id": 1,
-        "nombre": "Diego",
-        "apellido": "Pérez",
-        "email": "Diego.pérez@gmail.com",
-        "contraeña": "diego123",
-        "categoría": "Vendedor",
-        "avatar": "default-image-user.png"
-
-    },
-    {
-        "id": 2,
-        "nombre": "Juana",
-        "apellido": "García",
-        "email": "Juana.garcía@gmail.com",
-        "contraeña": "juana123",
-        "categoría": "Vendedor",
-        "avatar": "default-image-user.png"
-
-    },
-    {
-        "id": 3,
-        "nombre": "Pedro",
-        "apellido": "Nara",
-        "email": "Pedro.nara@gmail.com",
-        "contraeña": "pedro123",
-        "categoría": "Comprador",
-        "avatar": "default-image-user.png"
-
-    },
-    {
-        "id": 4,
-        "nombre": "Paula",
-        "apellido": "Icardi",
-        "email": "Paula.icardi@gmail.com",
-        "contraeña": "paula123",
-        "categoría": "Comprador",
-        "avatar": "default-image-user.png"
-
-    }
+ {
+  "id": 1,
+  "nombre": "Paula",
+  "apellido": "Icardi",
+  "email": "Paula.icardi@gmail.com",
+  "contraeña": "paula123",
+  "categoría": "Comprador",
+  "avatar": "default-image-user.png"
+ },
+ {
+  "id": 2,
+  "name": "asd",
+  "lastname": "asd",
+  "email": "juanma.bauer@gmail.com",
+  "password": "$2a$10$DHS202rfCTRPaiXNfV7l3uywRVF0Ik0Ic4u.qC0J5t51VMz3Bco4y",
+  "crear": "",
+  "avatar": "1636924979164_img.jpg"
+ },
+ {
+  "id": 3,
+  "name": "dddd",
+  "lastname": "dddd",
+  "email": "d@gmail.com",
+  "password": "$2a$10$3/Lblm/JuT0ItOINSXGMUelIpgER3GPneIHJPZPfg1CkB5Ero2NYC",
+  "crear": "",
+  "avatar": "1636927137785_img.jpg"
+ }
 ]

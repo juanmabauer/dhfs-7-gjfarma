@@ -1,52 +1,52 @@
 [
-    {
-        "id": 1,
-        "name": "Labial líquido",
-        "brand": "Maybelline",
-        "description": "Lorem ipsum dolor sit amet.",
-        "image": "belleza-labial.png",
-        "category": "Belleza",
-        "stock": "25",
-        "price": "1200"
-    },
-    {
-        "id": 2,
-        "name": "Shampoo manzanilla ",
-        "brand": "Johnsons baby ",
-        "description": "Lorem ipsum dolor sit amet.",
-        "image": "shampoo-manzanilla.jpg",
-        "category": "Limpieza",
-        "stock": "25 ",
-        "price": "500 "
-    },
-    {
-        "id": 3,
-        "name": "Satial food ",
-        "brand": "Satial ",
-        "description": "Lorem ipsum dolor sit amet.",
-        "image": "satial-food.jpg",
-        "category": "Limpieza",
-        "stock": "25 ",
-        "price": "900 "
-    },
-    {
-        "id": 4,
-        "name": "Limpiador gel con lavandina ",
-        "brand": "Lysoform ",
-        "description": "Lorem ipsum dolor sit a",
-        "image": "lavandina-en-gel.jpg",
-        "category": "Limpieza",
-        "stock": "25 ",
-        "price": "300 "
-    },
-    {
-        "id": 5,
-        "name": "Enjuague bucal ",
-        "brand": "Listerine ",
-        "description": "Lorem ipsum dolor sit amet.",
-        "image": "enjuague-bucal.jpg",
-        "category": "Salud",
-        "stock": "25 ",
-        "price": "450 "
-    }
+ {
+  "id": 1,
+  "name": "Labial líquido",
+  "brand": "Maybelline",
+  "description": "Lorem ipsum dolor sit amet.",
+  "image": "belleza-labial.png",
+  "category": "Belleza",
+  "stock": "25",
+  "price": "1200"
+ },
+ {
+  "id": 2,
+  "name": "Shampoo manzanilla ",
+  "brand": "Johnsons baby ",
+  "description": "Lorem ipsum dolor sit amet.",
+  "image": "shampoo-manzanilla.jpg",
+  "category": "Limpieza",
+  "stock": "25 ",
+  "price": "500 "
+ },
+ {
+  "id": 3,
+  "name": "Satial food ",
+  "brand": "Satial ",
+  "description": "Lorem ipsum dolor sit amet.",
+  "image": "satial-food.jpg",
+  "category": "Limpieza",
+  "stock": "25 ",
+  "price": "900 "
+ },
+ {
+  "id": 4,
+  "name": "Limpiador gel con lavandina ",
+  "brand": "Lysoform ",
+  "description": "Lorem ipsum dolor sit a",
+  "image": "lavandina-en-gel.jpg",
+  "category": "Limpieza",
+  "stock": "25 ",
+  "price": "300 "
+ },
+ {
+  "id": 5,
+  "name": "Enjuague bucal ",
+  "brand": "Listerine ",
+  "description": "Lorem ipsum dolor sit amet.",
+  "image": "enjuague-bucal.jpg",
+  "category": "Salud",
+  "stock": "25 ",
+  "price": "450 "
+ }
 ]
