@@ -4,8 +4,7 @@ const { body } = require('express-validator');
 module.exports = [
 	body('name').notEmpty().withMessage('Tienes que escribir un nombre'),
 	body('lastname').notEmpty().withMessage('Tienes que escribir un apellido'),
-    body('email')
-		.notEmpty().withMessage('Tienes que escribir un correo electrónico'),
+    body('email').notEmpty().withMessage('Tienes que escribir un correo electrónico'),
 	body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
 	body('avatar').custom((value, { req }) => {
 		let file = req.file;

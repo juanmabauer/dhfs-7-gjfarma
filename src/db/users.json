@@ -12,45 +12,9 @@
   "id": 2,
   "name": "asd",
   "lastname": "asd",
-  "email": "juanma.bauer@gmail.com",
-  "password": "$2a$10$DHS202rfCTRPaiXNfV7l3uywRVF0Ik0Ic4u.qC0J5t51VMz3Bco4y",
+  "email": "asd@gmail.com",
+  "password": "$2a$10$kG7A0JSsGPCaap6HXnJA2ebLmVdMf3qL30jmpR1bZYbsoUdUmH40y",
   "crear": "",
-  "avatar": "1636924979164_img.jpg"
- },
- {
-  "id": 3,
-  "name": "dddd",
-  "lastname": "dddd",
-  "email": "d@gmail.com",
-  "password": "$2a$10$3/Lblm/JuT0ItOINSXGMUelIpgER3GPneIHJPZPfg1CkB5Ero2NYC",
-  "crear": "",
-  "avatar": "1636927137785_img.jpg"
- },
- {
-  "id": 4,
-  "name": "Juan",
-  "lastname": "Perez",
-  "email": "jp@gmail.com",
-  "password": "$2a$10$LytGDHWktLM/wDFN0HhXjuJszZa7DI.nLXDct13LdpOPcnCNsNuBq",
-  "crear": "",
-  "avatar": "1637535206172_img.png"
- },
- {
-  "id": 5,
-  "name": "pedro",
-  "lastname": "perez",
-  "email": "pp@gmail.com",
-  "password": "$2a$10$QEP1OuOH32w0rIQQJ42XKeHxY3cOuSyU3tUgY9EepJc7FjZ.nsSoi",
-  "crear": "",
-  "avatar": "1637536244029_img.png"
- },
- {
-  "id": 6,
-  "name": "Juan",
-  "lastname": "Cito",
-  "email": "jc@noexiste.com",
-  "password": "$2a$10$4RAm9efg0QgJVcx6SC2mfui1VimxQJ.g0QJGTNsKlo/FlT3llmaFW",
-  "crear": "",
-  "avatar": "1637592335264_img.png"
+  "avatar": "1637614861896_img.jpg"
  }
 ]

@@ -8,17 +8,27 @@
             <main>
                 <section class="profile">
                     <h5>Tus datos:</h5>
-                    <div>
-                        <label for="name">Nombre:</label>
-                        <%= user.name %>
+                    <div class="profile-container">
+                        <div class="left-profile">
+                            <div class="profile-line">
+                                <label for="name">Nombre:</label>
+                                <%= user.name %>
+                            </div>
+                            <div class="profile-line">
+                                <label for="lastname">Apellido:</label>
+                                <%= user.lastname %>
+                            </div>
+                            <div class="profile-line">
+                                <label for="email">Email:</label>
+                                <%= user.email %>
+                            </div>
+                        </div>
+                        <div class="avatar-profile">
+                            <img src="/images/users/<%= user.avatar %> " width="120" height="120">
+                        </div>
                     </div>
-                    <div>
-                        <label for="lastname">Apellido:</label>
-                        <%= user.lastname %>
-                    </div>
-                    <div>
-                        <label for="email">Email:</label>
-                        <%= user.email %>
+                    <div class="logout">
+                        <a href="/users/logout">Cerrar sesión</a>
                     </div>
 
                 </section>

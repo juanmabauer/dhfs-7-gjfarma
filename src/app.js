@@ -11,6 +11,7 @@ app.set('view engine', 'ejs');
 app.set("views", path.resolve(__dirname, "views"));
 
 const publicPath = path.resolve(__dirname, "../public");
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 app.use(session({
 	secret: "GJFarma",
@@ -18,6 +19,7 @@ app.use(session({
 	saveUninitialized: false,
 }));
 app.use(cookies());
+app.use(userLoggedMiddleware);
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
