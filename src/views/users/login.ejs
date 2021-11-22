@@ -16,7 +16,7 @@
                     </div>
                 <% } %>
                 <input class="controls" type="password" name="password" value="" placeholder="Contraseña">
-                <% if (locals.errors && errors.email) { %>
+                <% if (locals.errors && errors.password) { %>
                     <div class="text-danger">
                         <%= errors.password.msg %>
                     </div>

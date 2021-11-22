@@ -25,5 +25,32 @@
   "password": "$2a$10$3/Lblm/JuT0ItOINSXGMUelIpgER3GPneIHJPZPfg1CkB5Ero2NYC",
   "crear": "",
   "avatar": "1636927137785_img.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Juan",
+  "lastname": "Perez",
+  "email": "jp@gmail.com",
+  "password": "$2a$10$LytGDHWktLM/wDFN0HhXjuJszZa7DI.nLXDct13LdpOPcnCNsNuBq",
+  "crear": "",
+  "avatar": "1637535206172_img.png"
+ },
+ {
+  "id": 5,
+  "name": "pedro",
+  "lastname": "perez",
+  "email": "pp@gmail.com",
+  "password": "$2a$10$QEP1OuOH32w0rIQQJ42XKeHxY3cOuSyU3tUgY9EepJc7FjZ.nsSoi",
+  "crear": "",
+  "avatar": "1637536244029_img.png"
+ },
+ {
+  "id": 6,
+  "name": "Juan",
+  "lastname": "Cito",
+  "email": "jc@noexiste.com",
+  "password": "$2a$10$4RAm9efg0QgJVcx6SC2mfui1VimxQJ.g0QJGTNsKlo/FlT3llmaFW",
+  "crear": "",
+  "avatar": "1637592335264_img.png"
  }
 ]

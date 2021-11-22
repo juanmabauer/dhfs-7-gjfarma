@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head', {'title': 'Perfil de usuario' }) %>
+
+    <body>
+        <%- include('../partials/header') %>
+            <main>
+                <section class="profile">
+                    <h5>Tus datos:</h5>
+                    <div>
+                        <label for="name">Nombre:</label>
+                        <%= user.name %>
+                    </div>
+                    <div>
+                        <label for="lastname">Apellido:</label>
+                        <%= user.lastname %>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <%= user.email %>
+                    </div>
+
+                </section>
+
+            </main>
+            <%- include('../partials/footer') %>
+    </body>

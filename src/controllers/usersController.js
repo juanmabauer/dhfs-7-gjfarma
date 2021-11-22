@@ -88,8 +88,13 @@ let controller = {
 
 		let userCreated = userSession.create(userToCreate);
 
-		 res.redirect('/users/login');
+		 res.redirect('profile/'+userCreated.id);
     },
+	profile:(req,res)=>{
+		let id= parseInt(req.params.id);
+        let userProfile= userSession.findByPk(id);
+        res.render('users/profile', {user:userProfile})
+	},
     login: (req,res)=>{
         res.render('users/login');
     },

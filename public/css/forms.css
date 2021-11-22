@@ -7,7 +7,7 @@
   /*box-shadow: 7px 13px 37px #000;*/
   padding: 20px 30px;
   border-top: 4px solid var(--color-black);
-  color: var(--color-white-cold);
+  color: var(--color-black);
 }
 
 .form-login h5 {
@@ -28,7 +28,7 @@
   background: var(--color-white-cold);
   font-size: 14px;
   font-weight: bold;
-  color: white;
+  color: var(--color-black);
 }
 
 .buttons {
