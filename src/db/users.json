@@ -16,5 +16,14 @@
   "password": "$2a$10$kG7A0JSsGPCaap6HXnJA2ebLmVdMf3qL30jmpR1bZYbsoUdUmH40y",
   "crear": "",
   "avatar": "1637614861896_img.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Juan",
+  "lastname": "Cito",
+  "email": "jc@noexiste.com",
+  "password": "$2a$10$Ph0DT4mBAgU1pKfC91cZHusZu3at31xGskk/PC/Lw5dosN7/aaIHC",
+  "crear": "",
+  "avatar": "1637627154841_img.png"
  }
 ]

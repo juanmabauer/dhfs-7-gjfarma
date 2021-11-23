@@ -31,3 +31,11 @@
   .profile-line{
       margin-bottom: 10px;
   }
+  .logout a{
+    background-color: var(--color-black);
+    color: var(--color-white-cold);
+    border-radius: 5px;
+    padding: 5px;
+ 
+  }
+  
