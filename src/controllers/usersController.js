@@ -32,7 +32,8 @@ let controller = {
 		let userToCreate = {
 			...req.body,
 			password: bcryptjs.hashSync(req.body.password, 10),
-			avatar: req.file.filename
+			avatar: (req.file && req.file.filename) ? req.file.filename : 'default-img-user.png',
+			isAdmin: false
 		}
 
 		let userCreated = userSession.create(userToCreate);
@@ -55,6 +56,7 @@ let controller = {
 			if (isOkThePassword) {
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
+				req.session.isAdmin = userToLogin.isAdmin;
 
 				if(req.body.remember) {
 					res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 })

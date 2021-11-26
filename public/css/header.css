@@ -129,7 +129,9 @@ nav ul ul ul {
 .user{
 	margin-right: 20px;
 }
-
+.user a{
+	color: var(--color-black);
+}
 .fa-user{
     color: var(--color-black);
 	border-radius: 50px;

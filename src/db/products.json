@@ -1,52 +1,122 @@
 [
- {
-  "id": 1,
-  "name": "Labial líquido",
-  "brand": "Maybelline",
-  "description": "Lorem ipsum dolor sit amet.",
-  "image": "belleza-labial.png",
-  "category": "Belleza",
-  "stock": "25",
-  "price": "1200"
- },
- {
-  "id": 2,
-  "name": "Shampoo manzanilla ",
-  "brand": "Johnsons baby ",
-  "description": "Lorem ipsum dolor sit amet.",
-  "image": "shampoo-manzanilla.jpg",
-  "category": "Limpieza",
-  "stock": "25 ",
-  "price": "500 "
- },
- {
-  "id": 3,
-  "name": "Satial food ",
-  "brand": "Satial ",
-  "description": "Lorem ipsum dolor sit amet.",
-  "image": "satial-food.jpg",
-  "category": "Limpieza",
-  "stock": "25 ",
-  "price": "900 "
- },
- {
-  "id": 4,
-  "name": "Limpiador gel con lavandina ",
-  "brand": "Lysoform ",
-  "description": "Lorem ipsum dolor sit a",
-  "image": "lavandina-en-gel.jpg",
-  "category": "Limpieza",
-  "stock": "25 ",
-  "price": "300 "
- },
- {
-  "id": 5,
-  "name": "Enjuague bucal ",
-  "brand": "Listerine ",
-  "description": "Lorem ipsum dolor sit amet.",
-  "image": "enjuague-bucal.jpg",
-  "category": "Salud",
-  "stock": "25 ",
-  "price": "450 "
- }
+    {
+        "id": 1,
+        "name": "Labial líquido",
+        "brand": "Maybelline",
+        "description": "Lorem ipsum dolor sit amet.",
+        "image": "belleza-labial.png",
+        "category": "Belleza",
+        "stock": "25",
+        "price": "1200"
+    },
+    {
+        "id": 4,
+        "name": "Limpiador gel con lavandina ",
+        "brand": "Lysoform ",
+        "description": "Lorem ipsum dolor sit a",
+        "image": "lavandina-en-gel.jpg",
+        "category": "Limpieza",
+        "stock": "25 ",
+        "price": "300 "
+    },
+    {
+        "id": 5,
+        "name": "Enjuague bucal ",
+        "brand": "Listerine ",
+        "description": "Lorem ipsum dolor sit amet.",
+        "image": "enjuague-bucal.jpg",
+        "category": "Salud",
+        "stock": "25 ",
+        "price": "450 "
+    },
+    {
+        "id": 6,
+        "name": "Termometro digital infrarrojo",
+        "brand": "Bokang",
+        "category": "Salud",
+        "stock": "7",
+        "price": "2500",
+        "description": "Termómetro Infrarrojo Bokang-BK8005 obtiene la temperatura corporal humana midiendo la radiación térmica de la frente del paciente. Memoria que almacena hasta 32 registros de mediciones. Funciona con 2 pilas AA (no incluidas)",
+        "image": "product-1637881847902.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Pompones algodon",
+        "brand": "Estrella",
+        "category": "Salud",
+        "stock": "70",
+        "price": "200",
+        "description": "Elaborados con 100% algodón de máxima pureza, son especialmente recomendados para uso cosmético. Por su nivel de suavidad son especiales par los cuidados diarios de la piel. También se los puede utilizar para sacar el esmalte de las uñas.\r\nOpiniones sobre el producto",
+        "image": "product-1637880565620.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Jabon liquido para mano",
+        "brand": "Protex",
+        "category": "Salud",
+        "stock": "35",
+        "price": "190",
+        "description": "Protex® te ofrece una prolongada protección contra bacterias para la buena salud de tu piel y la de tu familia.\r\nBeneficios:\r\n-Protex® Macadamia elimina 99.9% de las bacterias de la piel¹\r\n-Su fórmula combinada con extracto de macadamia ayuda a dejar la piel saludable, protegida y con una sensación de humectación\r\n",
+        "image": "product-1637880675496.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Suavizante concentrado",
+        "brand": "Downy",
+        "category": "Limpieza",
+        "stock": "54",
+        "price": "550",
+        "description": "Suavizante para la ropa Downy Concentrado protege tu ropa contra los malos olores. Downy posee cápsulas de perfume que neutrializan los malos olores, y permiten que tengas perfume en tu ropa todo el día. Downy Concentrado, vestite de perfume todo el día.\r\n\r\n- Protege de Malos Olores\r\n- Perfume Duradero\r\n- Suavizante Concentrado, Media Tapita Alcanza\r\n- Suavidad Increíble\r\n- Facilita el Planchado",
+        "image": "product-1637881822731.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Detergente active gel ",
+        "brand": "Cif",
+        "category": "Limpieza",
+        "stock": "122",
+        "price": "185",
+        "description": "Cif Detergente Active Gel Limón Verde (500 ml), con fórmula evolucionada, se mantiene por más tiempo en tu esponja versus lavavajillas regulares. Si disfrutaste de una comida un poco grasosa o aceitosa, el detergente de platos Cif Active Gel Limón Verde sin dudas te va a salvar. La grasa se adhiere a los platos y plásticos, y los aceites son inmunes al efecto del agua: lo que necesitas es un detergente líquido como alguno de la línea de Cif Active Gel, que terminan con la grasa de modo definitivo dejando los platos limpios y usando menos cantidad de producto.",
+        "image": "product-1637881052007.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Jabón líquido baja espuma",
+        "brand": "Skip",
+        "category": "Limpieza",
+        "stock": "70",
+        "price": "780",
+        "description": "El jabón líquido Skip Regular con pH Balanceado, protege contra los 5 signos de daño. Gracias a su tecnología Fibercare Serum el nuevo Skip Fibercare líquido protege tu ropa contra los 5 signos de daño: Mantiene colores, previene pelotitas, elimina manchas, cuida texturas y reduce el amarillentamiento. Recomendaciones: leé bien las instrucciones de las etiquetas que trae cada prenda, ya que no todas son aptas para lavarropas. Luego, separá las prendas por colores; hacé un lavado para ropa blanca y clara, y otro para las de color. Si alguna prenda está manchada, utilizá antes algún prelavado, que se aplica directo sobre la mancha y se deja actuar durante 5 minutos antes del lavado. Dosificación: una tapa al ras (100?ml) basta para una carga completa de ropa. Coloque el producto en el compartimento del lavado de la gaveta de su lavarropas. Para lavado a mano, utilice 1 tapa (100 ML) para una balde de agua (10 L). Para ropa muy sucia, dosifica 1 tapa y media (150?ml). Si se presentan manchas difíciles, aplique el producto directamente sobre las mismas. Ideal para el cuidado diario de tu ropa, ya sea blanca, oscura o de color. No se recomienda el uso en lana y seda.",
+        "image": "product-1637881124832.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Polvo compacto",
+        "brand": "Maybelline",
+        "category": "Belleza",
+        "stock": "55",
+        "price": "650",
+        "description": "¡Lucí una piel bronceada todo el año! Probá el polvo compacto Super Natural Sun.\r\n\r\nTonalizador compacto. Para todo tipo de piel.\r\n\r\nModo de uso:\r\n\r\nUtilizá el cisne aplicador y expandí delicadamente desde el centro hacia los laterales",
+        "image": "product-1637881404650.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Mascara de pestañas",
+        "brand": "Maybelline",
+        "category": "Belleza",
+        "stock": "75",
+        "price": "1300",
+        "description": "Obtené pestañas largas e impactantes al instante\r\n\r\nLe da volumen y longitud a las pestañas\r\n\r\nEl cepillo de doble curva impacta en las pestañas desde el comienzo de las mismas para levantarlas y darles volumen\r\n\r\nModo de uso:\r\n\r\nUsar el cepillo aplicandolo en las pestañas desde el comienzo hasa el fina de las mismas. Aplicar hasta obtener el efecto deseado.",
+        "image": "product-1637881631150.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Aqualia thermal",
+        "brand": "Vichy",
+        "category": "Belleza",
+        "stock": "43",
+        "price": "4500",
+        "description": "Nueva fórmula con 97% de ingredientes de origen natural. Eficacia 48hs, testeada incluso en condiciones extremas como polución, stress y condiciones climáticas adversas. Formulada con una dosis precisa para re hidratar tu piel. Tratamiento hidratante, apto para pieles sensibles, normales a secas.\r\nRecarga de hitradatación a tu piel, propicia un comfort intenso y mantiene la hidratacion hasta 48 horas.Enriquecido con agua mineralizante de Vichy para fortificar y proteger la piel con ingredientes de origen natural,como acido hialurónico y el azucar vegetal manosa. Suave y seguro para todo tipo de pieles,testeado sobre un 100% de pieles sensibles bajo control dermatologico.\r\nSe recomienda a plicar mañana y/o noche sobre la piel perfectamente limpia; colocar el producto con la yema de los dedos, distribuído en 5 puntos del rostro: 3 en la línea media (frente, naríz y mentón) y 2 en los extremos (pómulos); y distribuir desde la línea media del rostro hacia afuera.\r\nSi utilizás un tratamiento anti-edad, primero limpiá tu piel, aplicá el tratamiento hidratante y al final el tratamiento anti-edad. Tu piel estará lista para maquillarse.\r\nEntre los principales componentes se hallan: ácido hialurónico de origen natural, Agua termal mineralizante de Vichy, Azúcares de origen natural y minerales.",
+        "image": "product-1637881722677.jpg"
+    }
 ]

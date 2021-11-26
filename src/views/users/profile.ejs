@@ -27,10 +27,16 @@
                             <img src="/images/users/<%= user.avatar %> " width="120" height="120">
                         </div>
                     </div>
-                    <div class="logout">
-                        <a href="/users/logout">Cerrar sesión</a>
+                    <div class="botton-box">
+                        <div class="logout">
+                            <a href="/users/logout">Cerrar sesión</a>
+                        </div>   
+                        <% if(userLogged.isAdmin){ %> 
+                        <div class="crud">
+                            <a href="/products/crud">ABM productos</a>
+                        </div>
+                        <% } %> 
                     </div>
-
                 </section>
 
             </main>

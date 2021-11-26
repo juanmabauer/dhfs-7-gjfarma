@@ -31,11 +31,15 @@
   .profile-line{
       margin-bottom: 10px;
   }
-  .logout a{
+  .logout a, .crud a{
     background-color: var(--color-black);
     color: var(--color-white-cold);
     border-radius: 5px;
     padding: 5px;
  
+  }
+  .botton-box{
+    display: flex;
+    justify-content: space-between;
   }
   
