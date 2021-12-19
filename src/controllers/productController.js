@@ -1,82 +1,51 @@
-const path = require('path');
-const fs = require ('fs');
+const db = require('../database/models');
 
-let jsonProducts = fs.readFileSync(path.resolve(__dirname,'../db/products.json'), 'utf-8'); 
-let products = JSON.parse(jsonProducts);
-
-
-const nuevoId = () => {
-    let ultimo = 0;
-    products.forEach(product => {
-        if (product.id > ultimo) {
-            ultimo = product.id;
-        }
-    });
-    return ultimo + 1;
-}
 
 let controller = {
     cart: (req, res) => {
         res.render('products/cart');
     },
     detail: (req, res) => {
-        let id= req.params.id;
-        let productDetail= products.find(product=> product.id==id);
-        res.render('products/detail', {product:productDetail})
+        db.Product.findByPk(req.params.id)
+            .then((product) => {
+                res.render('products/detail', { product: product })
+            })
+            .catch((resultado) => { console.log(resultado) })
     },
-    crud: (req,res)=>{
+    crud: (req, res) => {
 
-        res.render('products/crud',{products})
+        res.render('products/crud', { products })
     },
-    editItem: (req,res)=>{
-        let productEdit = products.find(product => {
-            return product.id == req.params.id;
-        })
-        res.render('products/editItem', {product: productEdit});
+    editItem: (req, res) => {
+        let productEdit = db.Product.findByPk(req.params.id)
+            .then((product) => {
+                res.render('products/editItem', { product: productEdit });
+            })
+            .catch((resultado) => { console.log(resultado) })
     },
-    update: (req,res) =>{
-        products.forEach(product => {
-            if (product.id == req.params.id) {
-                product.name = req.body.name;
-                product.brand = req.body.brand;
-                product.description = req.body.description;
-                product.image = (req.file && req.file.filename) ? req.file.filename : 'default-image-product.jpg';
-                product.category = req.body.category;
-                product.stock = req.body.stock;
-                product.price = req.body.price;
-            }
-        })
-
-        let jsonDeProductos = JSON.stringify(products, null, 4);
-        fs.writeFileSync(path.resolve(__dirname, '../db/products.json'), jsonDeProductos);
-
+    update: (req, res) => {
+        db.Product.update({
+            name: req.body.name,
+            brand_id: req.body.brand,
+            description: req.body.description,
+            image_id: (req.file && req.file.filename) ? req.file.filename : 'default-image-jpg',
+            category_id: req.body.category,
+            stock: req.body.stock,
+            price: req.body.price,
+        },
+            { where: { id: req.params.id } }
+        )
         res.redirect('/products/crud');
     },
-    addItem: (req, res) =>{
+    addItem: (req, res) => {
         res.render('products/addItem')
     },
-
-    store: (req,res)=>{
-        let product = {
-            id: nuevoId(),
-            ...req.body,
-             image: (req.file && req.file.filename) ? req.file.filename : 'default-image-product.jpg',
-        }
-        products.push(product);
-
-        let jsonDeProductos = JSON.stringify(products, null, 4);
-        fs.writeFileSync(path.resolve(__dirname, '../db/products.json'), jsonDeProductos);
-
+    store: (req, res) => {
+        db.Product.create({ ...req.body, image: (req.file && req.file.filename) ? req.file.filename : 'default-image-product.jpg' })
         res.redirect('/products/crud')
     },
-    delete: (req,res)=>{
-        let restProducts= products.filter(product=>{
-            return product.id!=req.params.id;
-        });
-
-        let jsonDeProductos = JSON.stringify(restProducts, null, 4);
-        fs.writeFileSync(path.resolve(__dirname, '../db/products.json'), jsonDeProductos);
-        
+    delete: (req, res) => {
+        db.Product.destroy({where:{id:req.params.id}}) 
         res.redirect('/products/crud')
     }
 }
