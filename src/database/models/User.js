@@ -8,27 +8,27 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         first_name: {
-            type: dataTypes.VARCHAR(45),
+            type: dataTypes.STRING(45),
             allowNull: false
         },
         last_name: {
-            type: dataTypes.VARCHAR(45),
+            type: dataTypes.STRING(45),
             allowNull: false
         },
         password: {
-            type: dataTypes.VARCHAR(45),
+            type: dataTypes.STRING(45),
             allowNull: false
         },
         email: {
-            type: dataTypes.VARCHAR(45),
+            type: dataTypes.STRING(45),
             allowNull: false,
             unique: true
         },
         category: {
-            type: dataTypes.VARCHAR(45)
+            type: dataTypes.STRING(45)
         },
         avatar: {
-            type: dataTypes.VARCHAR(80)
+            type: dataTypes.STRING(80)
         },
         rol_id: {
             type: dataTypes.INT.UNSIGNED

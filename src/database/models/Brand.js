@@ -1,14 +1,14 @@
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     let alias = 'Brand';
 
     let cols = {
         id: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
+            type: DataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
         name: {
-            type: dataTypes.VARCHAR(45)
+            type: DataTypes.STRING(45)
         }
     };
 
