@@ -34,7 +34,7 @@
             </div>
             <div class="product-category-products">
                 <%belleza.forEach(product=>{%>
-                    <%- include('partials/homeProductItem',{belleza}) %>
+                    <%- include('partials/homeProductItem',{product}) %>
                 <%   })%>
             </div>
         </div>
@@ -46,7 +46,7 @@
             </div>
             <div class="product-category-products">
                 <%salud.forEach(product=>{%>
-                    <%- include('partials/homeProductItem',{salud}) %>
+                    <%- include('partials/homeProductItem',{product}) %>
                 <%   })%>
                 
             </div>
@@ -60,7 +60,7 @@
             </div>
             <div class="product-category-products">
                 <%limpieza.forEach(product=>{%>
-                    <%- include('partials/homeProductItem',{limpieza}) %>
+                    <%- include('partials/homeProductItem',{product}) %>
                 <%   })%>
                 
             </div>
