@@ -8,44 +8,44 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         name: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.CHAR(45),
             allowNull: false
         },
         description: {
-            type: dataTypes.LONGTEXT,
+            type: dataTypes.TEXT,
             allowNull: false
         },
         price: {
-            type: dataTypes.INT,
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         stock: {
-            type: dataTypes.INT,
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         category_id: {
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         },
         brand_id: {
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         },
         image_id: {
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         },
     };
 
     let config = {
         tablename: 'products',
-        timestamps: true,
+        timestamps: false,
         underscored: true
     };
 
     const Product = sequelize.define(alias, cols, config);
 
     Product.associate = (models)=> {
-        Product.hasMany(models.Order, {
-            as: 'orders',
-            foreignKey: 'product_id'
+        Product.belongsToMany(models.Cart, {
+            as: "carts",
+            through: 'orders'
         });
         Product.belongsTo(models.Image, {
             as: 'images',
@@ -60,4 +60,5 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'brand_id'
         });
     }
+    return Product;
 }

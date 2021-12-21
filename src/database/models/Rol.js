@@ -8,13 +8,13 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         name: {
-            type: dataTypes.STRING(20)
+            type: dataTypes.CHAR(20)
         }
     };
 
     let config = {
         tablename: 'rols',
-        timestamps: true,
+        timestamps: false,
         underscored: true
     };
 
@@ -26,4 +26,5 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'rol_id'
         })
     }
+    return Rol;
 }

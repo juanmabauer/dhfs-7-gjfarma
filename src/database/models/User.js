@@ -8,36 +8,36 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         first_name: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.CHAR(45),
             allowNull: false
         },
         last_name: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.CHAR(45),
             allowNull: false
         },
         password: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.CHAR(45),
             allowNull: false
         },
         email: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.CHAR(45),
             allowNull: false,
             unique: true
         },
         category: {
-            type: dataTypes.STRING(45)
+            type: dataTypes.CHAR(45)
         },
         avatar: {
-            type: dataTypes.STRING(80)
+            type: dataTypes.CHAR
         },
         rol_id: {
-            type: dataTypes.INT.UNSIGNED
+            type: dataTypes.INTEGER.UNSIGNED
         }
     };
 
     let config = {
         tablename: 'users',
-        timestamps: true,
+        timestamps: false,
         underscored: true
     };
 
@@ -53,4 +53,5 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'user_id'
         })
     }
+    return User;
 }

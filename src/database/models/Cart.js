@@ -8,16 +8,16 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         user_id: {
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         },
         shipping_id: {
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         }
     };
 
     let config = {
         tablename: 'carts',
-        timestamps: true,
+        timestamps: false,
         underscored: true
     };
 
@@ -32,9 +32,10 @@ module.exports = (sequelize, dataTypes) => {
             as: 'shippings',
             foreignKey: 'shipping_id'
         });
-        Cart.hasMany(models.Order, {
-            as: 'orders',
-            foreignKey: 'cart_id'
+        Cart.belongsToMany(models.Product, {
+            as: 'products',
+            through: 'orders'
         });
     }
+    return Cart;
 }

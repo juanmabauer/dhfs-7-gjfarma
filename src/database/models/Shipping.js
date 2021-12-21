@@ -8,21 +8,21 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         address: {
-            type: dataTypes.STRING(80),
+            type: dataTypes.CHAR(80),
             allowNull: false,
         },
         zip: {
-            type: dataTypes.INT,
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         cost: {
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         }
     };
 
     let config = {
         tablename: 'shippings',
-        timestamps: true,
+        timestamps: false,
         underscored: true
     };
 
@@ -34,4 +34,5 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'shipping_id'
         });
     }
+    return Shipping;
 }

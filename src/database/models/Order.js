@@ -8,26 +8,26 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         quantity: {
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         },
         product_id: {
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         },
         cart_id: {
-            type: dataTypes.INT
+            type: dataTypes.INTEGER
         }
     };
 
     let config = {
         tablename: 'orders',
-        timestamps: true,
+        timestamps: false,
         underscored: true
     };
 
     const Order = sequelize.define(alias, cols, config);
 
     Order.associate = (models)=> {
-        Order.hasMany(models.Product, {
+        Order.belongsTo(models.Product, {
             as: 'products',
             foreignKey: 'product_id'
         });
@@ -36,4 +36,5 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'cart_id'
         });
     }
+    return Order;
 }

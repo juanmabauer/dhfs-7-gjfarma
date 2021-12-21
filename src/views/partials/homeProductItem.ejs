@@ -1,12 +1,12 @@
 <div class="product">
-    <a href="/products/detail/<%=product.id %> ">
-        <img src="/images/products/<%= product.image %> " alt="imagen producto <%= product.id %> ">
+    <a href="/products/detail/<%=products.id %> ">
+        <img src="/images/products/<%= products.image %> " alt="imagen producto <%= products.id %> ">
         <div class="product-detail">
             <div class="product-detail-description">
-                <%= product.name %> 
+                <%= products.name %> 
             </div>
             <div class="product-detail-price">
-               $<%= product.price %> 
+               $<%= products.price %> 
             </div>
         </div>
     </a>
