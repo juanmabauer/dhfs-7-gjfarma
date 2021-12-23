@@ -16,7 +16,7 @@ router.get('/login', controller.login);
 
 router.post('/login', controller.processLogin);
 
-router.get('/profile/:id', authMiddleware, controller.profile);
+router.get('/profile', authMiddleware, controller.profile);
 
 router.get('/logout', controller.logout);
 

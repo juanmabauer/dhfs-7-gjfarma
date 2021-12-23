@@ -1,6 +1,6 @@
 <div class="product">
     <a href="/products/detail/<%=product.id %> ">
-        <img src="/images/products/<%= product.image %> " alt="imagen producto <%= product.id %> ">
+        <img src="/images/products/<%= product.image?.name ?? "default-image-product.jpg" %> " alt="imagen producto <%= product.id %> ">
         <div class="product-detail">
             <div class="product-detail-description">
                 <%= product.name %> 

@@ -12,11 +12,11 @@
                         <div class="left-profile">
                             <div class="profile-line">
                                 <label for="name">Nombre:</label>
-                                <%= user.name %>
+                                <%= user.first_name %>
                             </div>
                             <div class="profile-line">
                                 <label for="lastname">Apellido:</label>
-                                <%= user.lastname %>
+                                <%= user.last_name %>
                             </div>
                             <div class="profile-line">
                                 <label for="email">Email:</label>
@@ -31,7 +31,7 @@
                         <div class="logout">
                             <a href="/users/logout">Cerrar sesión</a>
                         </div>   
-                        <% if(userLogged.isAdmin){ %> 
+                        <% if(isAdmin){ %> 
                         <div class="crud">
                             <a href="/products/crud">ABM productos</a>
                         </div>

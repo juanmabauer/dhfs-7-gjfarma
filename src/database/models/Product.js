@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         name: {
-            type: dataTypes.CHAR(45),
+            type: dataTypes.STRING(45),
             allowNull: false
         },
         description: {
@@ -47,16 +47,15 @@ module.exports = (sequelize, dataTypes) => {
             as: "carts",
             through: 'orders'
         });
-        Product.belongsTo(models.Image, {
-            as: 'images',
-            foreignKey: 'image_id'
+        Product.belongsTo(models.Image,{
+            as: "image"
         });
         Product.belongsTo(models.Category, {
-            as: 'categories',
+            as: 'category',
             foreignKey: 'category_id'
         });
         Product.belongsTo(models.Brand, {
-            as: 'brands',
+            as: 'brand',
             foreignKey: 'brand_id'
         });
     }

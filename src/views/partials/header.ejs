@@ -18,9 +18,9 @@
 
             <div class="user">
                 <% if (locals.isLogged) { %>
-                    <a  href="/users/profile/<%= userLogged.id %>">
+                    <a  href="/users/profile">
                         <i class="far fa-user"></i>
-                          <%= locals.userLogged.name %>
+                          <%= locals.userLogged.first_name %>
                     </a>
                     <% } else { %>
                         <a href="/users/login">

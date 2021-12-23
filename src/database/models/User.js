@@ -8,27 +8,27 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         first_name: {
-            type: dataTypes.CHAR(45),
+            type: dataTypes.STRING(45),
             allowNull: false
         },
         last_name: {
-            type: dataTypes.CHAR(45),
+            type: dataTypes.STRING(45),
             allowNull: false
         },
         password: {
-            type: dataTypes.CHAR(45),
+            type: dataTypes.STRING(64),
             allowNull: false
         },
         email: {
-            type: dataTypes.CHAR(45),
+            type: dataTypes.STRING(45),
             allowNull: false,
             unique: true
         },
         category: {
-            type: dataTypes.CHAR(45)
+            type: dataTypes.STRING(45)
         },
         avatar: {
-            type: dataTypes.CHAR
+            type: dataTypes.STRING
         },
         rol_id: {
             type: dataTypes.INTEGER.UNSIGNED
@@ -45,7 +45,7 @@ module.exports = (sequelize, dataTypes) => {
 
     User.associate = (models)=> {
         User.belongsTo(models.Rol, {
-            as: 'rols',
+            as: 'rol',
             foreignKey: 'rol_id'
         });
         User.hasMany(models.Cart, {

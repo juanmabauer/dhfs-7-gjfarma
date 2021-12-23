@@ -15,10 +15,14 @@
                             </div>
                             <div class="form-unitary">
                                 <label for="brand name">Marca</label>
-                                <input type="text" name="brand" id="brand name" required>
+                                <select name="brand_id" required>
+                                    <% brands.forEach(function(brand) { %>
+                                        <option value="<%= brand.id%>"><%= brand.name%></option>
+                                    <% }); %> 
+                                </select>
                             </div>
                             <div class="form-unitary">
-                                <label for="img">Imágen</label>
+                                <label for="img">Imagen</label>
                                 <input type="file" name="image" id="img" accept="image/*">
                             </div>
 
@@ -27,11 +31,11 @@
                         <div class="second-block">
                             <div class="form-unitary">
                                 <label>Categoría del producto</label>
-                                <select name="category" required>
-                                    <option selected value="0">Elige una opción</option>
-                                    <option value="Salud">Salud</option>
-                                    <option value="Belleza">Belleza</option>
-                                    <option value="Limpieza">Limpieza</option>
+                                <select name="category_id" required>
+                                    <option selected >Elige una opción</option>
+                                        <% categories.forEach(function(category) { %>
+                                            <option value="<%= category.id%>"><%= category.name%></option>
+                                        <% }); %> 
                                 </select>
                             </div>
                             <div class="form-unitary">

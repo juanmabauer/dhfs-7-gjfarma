@@ -10,7 +10,7 @@
             <form method="POST" action="/users/register" enctype="multipart/form-data">
                 <input 
                     type="text" 
-                    name="name" 
+                    name="first_name" 
                     class="controls <%= locals.errors && errors.name ? 'is-invalid' : null %>" 
                     value="<%= locals.oldData ? oldData.name : null %>" 
                     placeholder="Nombre">
@@ -21,7 +21,7 @@
                    <% } %>
                 <input 
                     type="text" 
-                    name="lastname" 
+                    name="last_name" 
                     class="controls <%= locals.errors && errors.lastname ? 'is-invalid' : null %>" 
                     value="<%= locals.oldData ? oldData.lastname : null %>" 
                     placeholder="Apellido">

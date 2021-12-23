@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         name: {
-            type: dataTypes.CHAR(20)
+            type: dataTypes.STRING(20)
         }
     };
 

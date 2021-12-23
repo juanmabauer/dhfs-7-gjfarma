@@ -14,10 +14,17 @@
                     </div>
                     <div class="form-unitary">
                         <label for="brand name">Marca</label>
-                        <input type="text" name="brand" id="brand name" value="<%= product.brand %>" required>
+                        <select name="brand_id" required>
+                            <% brands.forEach(function(brand) { %>
+                                <%
+                                var selected = ( product.brand_id == brand.id ) ? "selected" : ""
+                                %>
+                                <option value="<%= brand.id%>" <%= selected%>><%= brand.name%></option>
+                            <% }); %> 
+                        </select>
                     </div>
                     <div class="form-unitary">
-                        <label for="img">Imágen</label>
+                        <label for="img">Imagen</label>
                         <input type="file" name="image" id="img" value="<%= product.image %>" accept="image/*">
                     </div>
                 
@@ -25,20 +32,14 @@
                 <div class="second-block">
                     <div class="form-unitary">
                         <label>Categoría del producto</label>
-                        <select name="category" required>
+                        <select name="category_id" required>
                             <option selected >Elige una opción</option>
-                                <%
-                                    var selected = ( product.category == "Salud" ) ? "selected" : ""
-                                %>
-                                <option value="Salud" <%= selected%>>Salud</option>
-                                <%
-                                    selected = ( product.category == "Belleza" ) ? "selected" : ""
-                                %>
-                                <option value="Belleza" <%= selected%>>Belleza</option>
-                                <%
-                                    selected = ( product.category == "Limpieza" ) ? "selected" : ""
-                                %>
-                                <option value="Limpieza" <%= selected%>>Limpieza</option>
+                                <% categories.forEach(function(category) { %>
+                                    <%
+                                    var selected = ( product.category_id == category.id ) ? "selected" : ""
+                                    %>
+                                    <option value="<%= category.id%>" <%= selected%>><%= category.name%></option>
+                                <% }); %> 
                         </select>
                     </div>
                     <div class="form-unitary">

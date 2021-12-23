@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         address: {
-            type: dataTypes.CHAR(80),
+            type: dataTypes.STRING(80),
             allowNull: false,
         },
         zip: {

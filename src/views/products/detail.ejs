@@ -7,19 +7,19 @@
             <main>
                 <div class="main-product">
                     <section class="product-container wrapper-container">
-                        <img src="/images/products/<%= product.image %> " alt="imagen producto <%= product.id %>" width="100%">
+                        <img src="/images/products/<%= product.image?.name ?? "default-image-product.jpg" %> " alt="imagen producto <%= product.id %>" width="100%">
                         <div class="top-product-info">
                             <ul>
                                 <a href="/">
                                     <li>home ></li>
                                 </a>
-                                <li><%= product.category %>></li>
+                                <li><%= product.category.name %>></li>
                                 <li><%= product.name %></li>
                             </ul>
                             <article class="brand-name-price">
                                 <div class="brand-name">
                                     <div class="brand">
-                                        <h3><%= product.brand %></h3>
+                                        <h3><%= product.brand.name %></h3>
                                     </div>
                                     <div class="name-product">
                                         <h5><%= product.name %></h5>

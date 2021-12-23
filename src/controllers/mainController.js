@@ -5,15 +5,18 @@ module.exports = {
     home: (req, res) => {
         let productsBeauty = db.Product.findAll({
             where: {category_id: 1},
-            limit: 4
+            limit: 4,
+            include: ['image']
         });
         let productsHealthy = db.Product.findAll({
             where: {category_id: 2},
-            limit: 4
+            limit: 4,
+            include: ['image']
         });
         let productsCleaning = db.Product.findAll({
             where: {category_id: 3},
-            limit: 4
+            limit: 4,
+            include: ['image']
         });
 
         Promise.all([productsBeauty, productsHealthy, productsCleaning])
