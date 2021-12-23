@@ -12,6 +12,36 @@ let controller = {
             })
             .catch((resultado) => { console.log(resultado) })
     },
+    beauty: (req, res) => {
+        db.Product.findAll({
+            where: {category_id: 1},
+            include: ['image']
+        }).then((product) => {
+            res.render('products/beauty', {product: product})
+        }).catch((resultado) => {
+            console.log(resultado)
+            })
+    },
+    healthy: (req, res) => {
+        db.Product.findAll({
+            where: {category_id: 2},
+            include: ['image']
+        }).then((product) => {
+            res.render('products/healthy', {product: product})
+        }).catch((resultado) => {
+            console.log(resultado)
+            })
+    },
+    cleaning: (req, res) => {
+        db.Product.findAll({
+            where: {category_id: 3},
+            include: ['image']
+        }).then((product) => {
+            res.render('products/cleaning', {product: product})
+        }).catch((resultado) => {
+             console.log(resultado)
+             })
+    },
     crud: async (req, res) => {
         let products = await db.Product.findAll({ include: ['category', 'brand' ] });
         res.render('products/crud', { products })

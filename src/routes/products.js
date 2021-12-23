@@ -22,6 +22,10 @@ router.get('/cart', authMiddleware, controller.cart);
 
 router.get('/detail/:id', controller.detail);
 
+router.get('/beauty', controller.beauty);
+router.get('/healthy', controller.healthy);
+router.get('/cleaning', controller.cleaning);
+
 router.get('/crud', adminMiddleware, controller.crud);
 
 router.get('/editItem/:id', adminMiddleware, controller.editItem);

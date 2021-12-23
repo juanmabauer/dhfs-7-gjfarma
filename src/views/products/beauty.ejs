@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/header') %> 
+
+    <div class="product-category">
+        <div class="wrapper-container">
+            <div class="product-category-title">
+                <h3>Todos nuestros productos de belleza</h3>
+            </div>
+            <div class="product-category-products">
+                <%product.forEach(product=>{%>
+                    <%- include('../partials/homeProductItem',{product}) %>
+                <%   })%>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %> 
+</body>
+</html>
