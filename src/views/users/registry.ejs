@@ -11,23 +11,23 @@
                 <input 
                     type="text" 
                     name="first_name" 
-                    class="controls <%= locals.errors && errors.name ? 'is-invalid' : null %>" 
-                    value="<%= locals.oldData ? oldData.name : null %>" 
+                    class="controls <%= locals.errors && errors.first_name ? 'is-invalid' : null %>" 
+                    value="<%= locals.oldData ? oldData.first_name : null %>" 
                     placeholder="Nombre">
-                <% if (locals.errors && errors.name) { %>
+                <% if (locals.errors && errors.first_name) { %>
                     <div class="text-danger">
-                        <%= errors.name.msg %> 
+                        <%= errors.first_name.msg %> 
                     </div>
                    <% } %>
                 <input 
                     type="text" 
                     name="last_name" 
-                    class="controls <%= locals.errors && errors.lastname ? 'is-invalid' : null %>" 
-                    value="<%= locals.oldData ? oldData.lastname : null %>" 
+                    class="controls <%= locals.errors && errors.last_name ? 'is-invalid' : null %>" 
+                    value="<%= locals.oldData ? oldData.last_name : null %>" 
                     placeholder="Apellido">
-                <% if (locals.errors && errors.lastname) { %>
+                <% if (locals.errors && errors.last_name) { %>
                     <div class="text-danger">
-                        <%= errors.lastname.msg %> 
+                        <%= errors.last_name.msg %> 
                     </div>
                    <% } %>
                 <input 

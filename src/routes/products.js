@@ -15,6 +15,7 @@ const storage = multer.diskStorage({
 });
 const authMiddleware = require('../middlewares/authMiddleware');
 const adminMiddleware = require('../middlewares/adminMiddleware');
+const validations = require('../middlewares/addProductMiddleware');
 
 const upload = multer ({storage});
 
@@ -29,10 +30,10 @@ router.get('/cleaning', controller.cleaning);
 router.get('/crud', adminMiddleware, controller.crud);
 
 router.get('/editItem/:id', adminMiddleware, controller.editItem);
-router.put('/editItem/:id', adminMiddleware, upload.single('image'), controller.update);
+router.put('/editItem/:id', adminMiddleware, upload.single('image'), validations, controller.update);
 
 router.get('/addItem', adminMiddleware, controller.addItem);
-router.post('/addItem', adminMiddleware, upload.single('image'), controller.store);
+router.post('/addItem', adminMiddleware, upload.single('image'), validations, controller.store);
 
 
 router.delete('/delete/:id', authMiddleware, controller.delete);

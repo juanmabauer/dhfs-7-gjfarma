@@ -87,39 +87,6 @@ let controller = {
 		req.session.destroy();
 		return res.redirect('/');
 	},
-	//getData: function () {
-	//		return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
-	//	},
-	//
-	//	generateId: function () {
-	//		let allUsers = this.findAll();
-	//		let lastUser = allUsers.pop();
-	//		if (lastUser) {
-	//			return lastUser.id + 1;
-	//		}
-	//		return 1;
-	//	},
-	//	findAll: function () {
-	//		return this.getData();
-	//	},
-	//
-	//	findByPk: function (id) {
-	//		let allUsers = this.findAll();
-	//		let userFound = allUsers.find(oneUser => oneUser.id === id);
-	//		return userFound;
-	//	},
-	//
-	//	findByField: function (field, text) {
-	//		let allUsers = this.findAll();
-	//		let userFound = allUsers.find(oneUser => oneUser[field] === text);
-	//		return userFound;
-	//	},
-	//
-	//	create: (req, res)=> {
-	//		db.User.create({...req.body, image: (req.file && req.file.filename) ? req.file.filename : 'default-img-user.png'})
-	//		res.redirect('/users/profile/:id')
-	//	},
-
 	delete: (req, res) => {
 		db.User.destroy({ where: { id: req.params.id } })
 		res.redirect('/products/crud')

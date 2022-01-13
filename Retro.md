@@ -78,7 +78,26 @@
 
 -----------------------------------------------
 
-## Retro Sprint 4
+## Retro Sprint 5
+
+### Comenzar a hacer
+- 
+
+### Hacer más
+- 
+
+### Continuar haciendo
+- Dividir tareas.
+- Trabajar colaborativamente.
+
+### Hacer menos
+- 
+
+### Dejar de hacer
+- 
+-----------------------------------------------
+
+## Retro Sprint 6
 
 ### Comenzar a hacer
 - 
