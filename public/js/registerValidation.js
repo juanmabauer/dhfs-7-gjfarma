@@ -49,7 +49,7 @@ window.onload= function (){
             delete errors.password;
         }
         if(!(/\.(gif|jpeg|jpg|png)$/i).test(avatar.value)){
-            errors.avatar=("Debes ingresar una imagen con alguna de las siguientes extensiones: .gif, .jpeg, .jpg  .png")
+            errors.avatar=("Debes ingresar una imagen")
             showError('#avatarerror', errors.avatar)
         }else{
             showError('#avatarerror', "")

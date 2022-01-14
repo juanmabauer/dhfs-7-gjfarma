@@ -27,7 +27,7 @@ window.onload= function (){
             delete errors.description;
         }
         if(!(/\.(gif|jpeg|jpg|png)$/i).test(image.value)){
-            errors.image=("Debes ingresar una imagen una de las siguientes extensiones: .gif, .jpeg, .jpg  .png")
+            errors.image=("Debes ingresar una imagen")
             showError('#imageerror', errors.image)
         }else{
             showError('#imageerror', "")
