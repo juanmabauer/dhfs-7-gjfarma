@@ -13,14 +13,14 @@ window.onload= function (){
         e.preventDefault();
         let errors= {};
         if(name.value.length<5){
-            errors.name =("Debes ingresar un nombre de almenos 5 caracteres")
+            errors.name =("Debes ingresar un nombre de al menos 5 caracteres")
             showError('#nameerror', errors.name)
         }else{
             showError('#nameerror', "")
             delete errors.name;
         }
         if(description.value.length<20){
-            errors.description =("Debes ingresar una descripción de almenos 20 caracteres")
+            errors.description =("Debes ingresar una descripción de al menos 20 caracteres")
             showError('#descriptionerror', errors.description)
         }else{
             showError('#descriptionerror', "")
