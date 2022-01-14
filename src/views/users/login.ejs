@@ -7,20 +7,20 @@
     <%- include('../partials/header') %>
 
         <section class="form-login">
-            <form action="/users/login" method="POST">
+            <form action="/users/login" method="POST" class="form-user-login">
                 <h5>Ingresa a tu cuenta</h5>
-                <input class="controls" type="text" name="email" value="" placeholder="Email">
-                <% if (locals.errors && errors.email) { %>
-                    <div class="text-danger">
+                <input class="controls" type="text" name="email" value="" placeholder="Email" id="control-email">
+                <div class="text-danger" id='emailerror'>
+                    <% if (locals.errors && errors.email) { %>
                         <%= errors.email.msg %>
-                    </div>
-                <% } %>
-                <input class="controls" type="password" name="password" value="" placeholder="Contraseña">
-                <% if (locals.errors && errors.password) { %>
-                    <div class="text-danger">
+                    <% } %>
+                </div>
+                <input class="controls" type="password" name="password" value="" placeholder="Contraseña" id="control-password">
+                <div class="text-danger" id='passworderror'>
+                    <% if (locals.errors && errors.password) { %>
                         <%= errors.password.msg %>
-                    </div>
-                <% } %>
+                    <% } %>
+                </div>
                 <input type="checkbox" value="lsRememberMe" id="remember" name="remember"> <label>Recordarme</label>
                 <br>
                 <br>
@@ -29,6 +29,6 @@
                 <p><a href="/users/register">Crea tu cuenta</a></p>
             </form>
         </section>
-
+        <script src="/js/loginValidation.js"></script>
     <%- include('../partials/footer') %> 
 </body>

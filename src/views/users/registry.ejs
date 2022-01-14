@@ -7,64 +7,80 @@
     <%- include('../partials/header') %>
         <section class="form-login">
             <h5>Te pedimos que ingreses tus datos:</h5>
-            <form method="POST" action="/users/register" enctype="multipart/form-data">
+            <form method="POST" action="/users/register" enctype="multipart/form-data" class="form-registry-login">
                 <input 
                     type="text" 
                     name="first_name" 
+                    id="registry-name"
                     class="controls <%= locals.errors && errors.first_name ? 'is-invalid' : null %>" 
                     value="<%= locals.oldData ? oldData.first_name : null %>" 
                     placeholder="Nombre">
-                <% if (locals.errors && errors.first_name) { %>
-                    <div class="text-danger">
-                        <%= errors.first_name.msg %> 
+                
+                    <div class="text-danger" id='nameerror'>
+                        <% if (locals.errors && errors.first_name) { %>
+                            <%= errors.first_name.msg %>
+                        <% } %>
                     </div>
-                   <% } %>
+                   
                 <input 
                     type="text" 
                     name="last_name" 
+                    id="registry-lastname"
                     class="controls <%= locals.errors && errors.last_name ? 'is-invalid' : null %>" 
                     value="<%= locals.oldData ? oldData.last_name : null %>" 
                     placeholder="Apellido">
-                <% if (locals.errors && errors.last_name) { %>
-                    <div class="text-danger">
-                        <%= errors.last_name.msg %> 
+               
+                    <div class="text-danger" id='lastnameerror'>
+                        <% if (locals.errors && errors.last_name) { %>
+                            <%= errors.last_name.msg %>
+                        <% } %>
                     </div>
-                   <% } %>
+                  
                 <input 
                     type="email" 
                     name="email" 
+                    id="registry-email"
                     class="controls <%= locals.errors && errors.email ? 'is-invalid' : null %>" 
                     value="<%= locals.oldData ? oldData.email : null %>" 
                     placeholder="Email">
-                <% if (locals.errors && errors.email) { %>
-                    <div class="text-danger">
-                        <%= errors.email.msg %> 
+                
+                    <div class="text-danger" id='emailerror'>
+                        <% if (locals.errors && errors.email) { %>
+                            <%= errors.email.msg %>
+                        <% } %>
                     </div>
-                   <% } %>
+                  
                 <input 
                     type="password" 
                     name="password" 
+                    id="registry-password"
                     class="controls <%= locals.errors && errors.password ? 'is-invalid' : null %>" 
                     value="" 
                     placeholder="Contraseña">
-                <% if (locals.errors && errors.password) { %>
-                    <div class="text-danger">
-                        <%= errors.password.msg %> 
+               
+                    <div class="text-danger" id='passworderror'>
+                        <% if (locals.errors && errors.password) { %>
+                            <%= errors.password.msg %>
+                        <% } %>
                     </div>
-                   <% } %>
+                  
                 <input 
                     type="file" 
                     name="avatar" 
+                    id="registry-image"
                     class="controls" 
                     value="">
-                    <% if (locals.errors && errors.avatar) { %>
-                        <div class="text-danger">
-                            <%= errors.avatar.msg %> 
+                    
+                        <div class="text-danger" id='avatarerror'>
+                            <% if (locals.errors && errors.avatar) { %>
+                                <%= errors.avatar.msg %>
+                            <% } %>
                         </div>
-                       <% } %>
+                       
                     <button class="buttons" type="submit" name="crear">Crear cuenta</button>
                 <p><a href="/users/login">Registrate</a></p>
             </form>
         </section>
+        <script src="/js/registerValidation.js"></script>
      <%- include('../partials/footer') %>
 </body>

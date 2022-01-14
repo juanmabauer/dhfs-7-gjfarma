@@ -23,7 +23,7 @@
 .controls {
   width: 100%;
   border: 1px solid var(--color-black);
-  margin-bottom: 15px;
+  margin-top: 15px;
   padding: 11px 10px;
   background: var(--color-white-cold);
   font-size: 14px;
