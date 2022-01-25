@@ -10,17 +10,16 @@ const usersApiController = {
                         total: users.length,
                         url: 'api/users'
                     },
-                    data: users.map((user)=>{
-                        return 
-                        {
+                    data: users.map(user=>{
+                        return {
                             id: user.id,
                             first_name: user.first_name,
                             last_name: user.last_name,
                             email: user.email,
-                            avatar: user.avatar,
-                            rol: user.rol
+                            avatar: 'http://localhost:3000/images/users/'+user.avatar,
+                            rol: user.rol,
+                            url: 'http://localhost:3000/api/users/'+user.id
                         }
-                        
                     }) 
                 }
                 res.json(respuesta);
@@ -43,7 +42,7 @@ const usersApiController = {
                         last_name: user.last_name,
                         email: user.email,
                         avatar: user.avatar,
-                        rol: user.rol
+                        rol: user.rol.name
                     }
                 }
                 res.json(respuesta);
