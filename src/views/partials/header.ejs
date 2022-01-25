@@ -37,9 +37,9 @@
             </a>
         </div>
         <div class="burger-menu-items" id="burger-menu-items">
-            <%- include('../partials/headerBurgerMenuCategory', {title: "Salud" }) %>
-                <%- include('../partials/headerBurgerMenuCategory', {title: "Belleza" }) %>
-                    <%- include('../partials/headerBurgerMenuCategory', {title: "Limpieza" }) %>
+            <%- include('../partials/headerBurgerMenuCategory', {route: "/products/healthy", title: "Salud" }) %>
+                <%- include('../partials/headerBurgerMenuCategory', {route:"/products/beauty" , title: "Belleza" }) %>
+                    <%- include('../partials/headerBurgerMenuCategory', {route: "/products/cleaning", title: "Limpieza" }) %>
         </div>
         <br>
     </div>
@@ -47,9 +47,9 @@
         <div class="categories-wrapper">
             <div class="wrapper-container">
                 <ul class='categories'>
-                    <%- include('../partials/headerMenuCategory', {title: "Salud" }) %>
-                        <%- include('../partials/headerMenuCategory', {title: "Belleza" }) %>
-                            <%- include('../partials/headerMenuCategory', {title: "Limpieza" }) %>
+                    <%- include('../partials/headerMenuCategory', {route: "/products/healthy", title: "Salud" }) %>
+                        <%- include('../partials/headerMenuCategory', {route:"/products/beauty", title: "Belleza" }) %>
+                            <%- include('../partials/headerMenuCategory', {route: "/products/cleaning", title: "Limpieza" }) %>
                 </ul>
             </div>
         </div>

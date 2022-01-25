@@ -29,9 +29,13 @@ app.use(express.json());
 const mainRouter = require('./routes/main');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
+const apiUsersRouter = require('./routes/api/users');
+const apiProductsRouter = require('./routes/api/products');
 
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
+app.use('/api/users',apiUsersRouter);
+app.use('/api/products',apiProductsRouter);
 
 app.listen(port,()=> console.log(`Running on port ${port}`));
