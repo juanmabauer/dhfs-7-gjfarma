@@ -114,3 +114,22 @@
 
 ### Dejar de hacer
 - 
+-----------------------------------------------
+
+## Retro Sprint 7
+
+### Comenzar a hacer
+- 
+
+### Hacer más
+- 
+
+### Continuar haciendo
+- Dividir tareas.
+- Trabajar colaborativamente.
+
+### Hacer menos
+- 
+
+### Dejar de hacer
+- 
