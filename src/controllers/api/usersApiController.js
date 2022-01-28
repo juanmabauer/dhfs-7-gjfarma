@@ -16,9 +16,9 @@ const usersApiController = {
                             first_name: user.first_name,
                             last_name: user.last_name,
                             email: user.email,
-                            avatar: 'http://localhost:3000/images/users/'+user.avatar,
+                            avatar: 'http://localhost:3001/images/users/'+user.avatar,
                             rol: user.rol,
-                            url: 'http://localhost:3000/api/users/'+user.id
+                            url: 'http://localhost:3001/api/users/'+user.id
                         }
                     }) 
                 }

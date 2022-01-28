@@ -2,7 +2,7 @@ const db = require('../../database/models');
 
 const productsApiController = {
     'list': (req, res) => {
-        db.Product.findAll({ include: ['image', 'brand'] })
+        db.Product.findAll({ include: ['image', 'brand', 'category'] })
         .then(products => {
             let respuesta = {
                 meta: {
@@ -18,7 +18,8 @@ const productsApiController = {
                         price: p.price,
                         stock: p.stock,
                         brand: p.brand.name,
-                        image: 'http://localhost:3000/images/products/'+p.image.name
+                        category: p.category.name,
+                        image: 'http://localhost:3001/images/products/'+p.image.name
                     }
                 })
             }

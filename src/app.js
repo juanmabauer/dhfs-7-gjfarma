@@ -31,11 +31,13 @@ const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const apiUsersRouter = require('./routes/api/users');
 const apiProductsRouter = require('./routes/api/products');
+const apiCategoriesRouter = require('./routes/api/categories');
 
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
 app.use('/api/users',apiUsersRouter);
 app.use('/api/products',apiProductsRouter);
+app.use('/api/categories',apiCategoriesRouter);
 
 app.listen(port,()=> console.log(`Running on port ${port}`));
