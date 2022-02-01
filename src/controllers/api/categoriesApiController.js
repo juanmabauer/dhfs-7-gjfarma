@@ -2,7 +2,7 @@ const db = require('../../database/models');
 
 const categoriesApiController = {
     'list': (req, res) => {
-        db.Category.findAll()
+        db.Category.findAll({include: ['products']})
             .then(categories => {
                 let respuesta = {
                     meta: {
@@ -14,6 +14,7 @@ const categoriesApiController = {
                         return {
                             id: category.id,
                             name: category.name,
+                            products: category.products.length,
                             url: 'http://localhost:3001/api/categories/' + category.id
                         }
                     })

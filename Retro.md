@@ -133,3 +133,25 @@
 
 ### Dejar de hacer
 - 
+-----------------------------------------------
+
+## Retro Sprint 8
+
+### Comenzar a hacer
+- Buscar un esposa como el de gina.
+- Buscar trabajo.
+- Hacer un portfolio de proyectos.
+
+### Hacer más
+- Siestas.
+- Mirar el video del fan de Yastin.
+
+### Continuar haciendo
+- Nada.
+
+### Hacer menos
+- 
+
+### Dejar de hacer
+- Juntarnos para el proyecto integrador.
+- Zooms los domingos a la tarde.
