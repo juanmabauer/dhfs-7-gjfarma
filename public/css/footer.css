@@ -38,3 +38,6 @@
     padding-bottom: 5px;
 
 }
+.link-list li a{
+    color: inherit
+}

@@ -1,0 +1,28 @@
+.faq{
+    margin: 15px 0;
+}
+.contact-us{
+    margin: 15px 0;
+}
+.aboutus{
+    margin: 15px 0;
+}
+.aboutus-img{
+    display: flex;
+    
+    width: 250px;
+}
+.aboutus-detail{
+    display: inline-flex;
+    flex-wrap: nowrap; 
+    justify-content: space-around;
+}
+.aboutus-text{
+    display: flex;
+    margin: 15px;
+
+   
+}
+.workwithus{
+    margin: 15px;
+}
