@@ -132,7 +132,6 @@ body { margin: 0;  }
 }
 .product-category-products{
     display: flex;
-    justify-content: space-around;
     width: 100%;
     flex-wrap: wrap;
 	background-color: var(--color-white-cold);

@@ -1,0 +1,16 @@
+
+<div class="search-results-item">
+    <a href="/products/detail/<%= model.id %> " class="search-results-item-link">
+        <div class="search-results-item-img">
+            <img src="/images/products/<%= model.image?.name ?? "default-image-product.jpg" %> " alt="">
+        </div>
+        <div class="search-results-item-description">
+        <div class="search-results-item-detail">
+            <%= model.name %> - <%= model.brand.name %> 
+        </div>
+        <div class="search-results-item-price">
+           $ <%= model.price %>
+        </div>
+    </div>
+    </a>
+</div>

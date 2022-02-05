@@ -1,4 +1,6 @@
 const db = require('../../database/models');
+const { Sequelize, Op } = require("sequelize");
+const ejs = require("ejs");
 
 const productsApiController = {
     'list': (req, res) => {
@@ -41,6 +43,21 @@ const productsApiController = {
                 }
                 res.json(respuesta);
             });
+    },
+    'search': async (req,res)=>{
+        db.Product.findAll({
+            where: Sequelize.literal(`product.name like '%${req.query.searchString}%' OR brand.name like '%${req.query.searchString}%'`),
+          include: ['image', 'brand']
+        })
+        .then(async products => {
+            let productsHtmlArray= await Promise.all(products.map(async product=>{
+                let html = await ejs
+                .renderFile("./src/views/partials/searchResultItem.ejs", { model: product })
+                .then((output) => output);
+                return html;
+            }));
+            res.json(productsHtmlArray);
+        })
     }
 }
 

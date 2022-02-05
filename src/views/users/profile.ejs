@@ -7,7 +7,7 @@
         <%- include('../partials/header') %>
             <main>
                 <section class="profile">
-                    <h5>Tus datos:</h5>
+                    <h5>Tus datos</h5>
                     <div class="profile-container">
                         <div class="left-profile">
                             <div class="profile-line">
@@ -30,12 +30,16 @@
                     <div class="botton-box">
                         <div class="logout">
                             <a href="/users/logout">Cerrar sesión</a>
-                        </div>   
-                        <% if(isAdmin){ %> 
-                        <div class="crud">
-                            <a href="/products/crud">ABM productos</a>
                         </div>
-                        <% } %> 
+                        <% if(isAdmin){ %>
+                            <div class="dashboard">
+                                
+                                <a href="http://localhost:3000/" target="_blank">Dashboard</a>
+                            </div>
+                            <div class="crud">
+                                <a href="/products/crud">ABM productos</a>
+                            </div>
+                            <% } %>
                     </div>
                 </section>
 

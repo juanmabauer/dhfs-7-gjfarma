@@ -21,7 +21,6 @@
   }
   .profile h5 {
     margin: 0;
-    text-align: center;
     height: 40px;
     margin-bottom: 30px;
     border-bottom: 1px solid;
@@ -31,7 +30,7 @@
   .profile-line{
       margin-bottom: 10px;
   }
-  .logout a, .crud a{
+  .logout a, .crud a, .dashboard a{
     background-color: var(--color-black);
     color: var(--color-white-cold);
     border-radius: 5px;
