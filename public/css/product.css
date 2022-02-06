@@ -63,9 +63,8 @@
 }
 
 .buy-button {
-    display: flex;
     margin: 20px 20px;
-    justify-content: space-between;
+    width: 60%;
 }
 
 .quantity {
@@ -203,6 +202,7 @@
     }
     .buy-button {
         padding-top: 30px;
+        margin-left: 100px;
     }
     .extra-links {
         margin-top: 40px;

@@ -30,35 +30,10 @@
                                 </div>
                             </article>
                             <div class="buy-button">
-                                <div class="quantity">
-                                    <div class="decrease">
-                                        <button class="subtract">-</button>
-                                    </div>
-                                    <div class="amount">1</div>
-                                    <div class="increase">
-                                        <button class="add-prod">+</button>
-                                    </div>
-                                </div>
-                                <a href="/products/cart">
-                                    <div class="add-to-cart">
-                                        <div class="add-product">Agregar</div>
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="extra-links">
-                                <a href="#">
-                                    <div class="payment-methods">
-                                        <i class="fas fa-credit-card"></i>
-                                        Metodos de pago
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="shipping-options">
-                                        <i class="fas fa-truck"></i>
-                                        Opciones de envío
-                                    </div>
-                                </a>
+                                <botton class="add-to-cart" onclick="addToCart('<%=product.id %>')">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Agregar
+                                </botton>
                             </div>
                         </div>
                     </section>
