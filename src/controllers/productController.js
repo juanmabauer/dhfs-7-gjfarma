@@ -1,10 +1,44 @@
 const db = require('../database/models');
 const { validationResult } = require('express-validator');
-
+const { resetWatchers } = require('nodemon/lib/monitor/watch');
+const { Op } = require("sequelize");
 
 let controller = {
     cart: (req, res) => {
-        res.render('products/cart');
+        let carrito = req.session.cart ?? [];
+        let productIds = carrito.map(x => parseInt(x.id));
+        db.Product.findAll({
+            include: ['image', 'brand', 'category'],
+            where: {
+                id: {
+                    [Op.in]: productIds
+                }
+            }
+        }).then(products => {
+            let cartProducts = products.map(dbProduct => {
+                let quantity = carrito.find(cartProduct=>cartProduct.id==dbProduct.id).quantity
+                let totalPrice = dbProduct.price * quantity;
+                return {
+                    id: dbProduct.id,
+                    name: dbProduct.name,
+                    quantity: quantity,
+                    image: dbProduct.image,
+                    price: dbProduct.price,
+                    totalPrice: totalPrice
+                }
+            });
+
+            let grandTotal = 0;
+            for (i = 0; i < cartProducts.length; i++){
+                grandTotal += cartProducts[i].totalPrice
+            }
+            
+            let totals = {
+                grandTotal: grandTotal,
+            }
+           
+            res.render('products/cart', { cartProducts: cartProducts, totals: totals });
+        });
     },
     detail: (req, res) => {
         db.Product.findByPk(req.params.id, { include: ['image', 'category', 'brand'] })
@@ -66,15 +100,16 @@ let controller = {
             var categoryPromise = db.Category.findAll();
             var brandPromise = db.Brand.findAll();
             var productPromise = db.Product.findByPk(req.params.id, { include: ['brand', 'category'] });
-    
+
             Promise.all([categoryPromise, brandPromise, productPromise])
                 .then(([categories, brands, product]) => {
-                    res.render('products/editItem', { 
-                        product, 
-                        categories, 
+                    res.render('products/editItem', {
+                        product,
+                        categories,
                         brands,
                         errors: resultValidation.mapped(),
-                        oldData: req.body, });
+                        oldData: req.body,
+                    });
                 })
                 .catch((resultado) => { console.log(resultado) })
 
@@ -140,10 +175,114 @@ let controller = {
         }
     },
 
-        
+
     delete: async (req, res) => {
         await db.Product.destroy({ where: { id: req.params.id } })
         res.redirect('/products/crud')
-    }
+    },
+
+    addToCart: (req, res) => {
+        if (!req.session.cart) {
+            req.session.cart = []
+        }
+        let productId = req.query.productId;
+        let quantity = parseInt(req.query.quantity ?? 1);
+        let cartItem = req.session.cart.find(e => e.id == productId);
+        if (!cartItem) {
+            cartItem = {
+                id: productId,
+                quantity: 0
+            }
+            req.session.cart.push(cartItem)
+        }
+        cartItem.quantity += quantity;
+        if (cartItem.quantity == 0){
+            console.log("pase por aca")
+            let index = req.session.cart.findIndex(x => x.id == productId);
+            req.session.cart.splice(index, 1);
+        }
+        
+        let productIds = req.session.cart.map(x => parseInt(x.id));
+        db.Product.findAll({
+            include: ['image', 'brand', 'category'],
+            where: {
+                id: {
+                    [Op.in]: productIds
+                }
+            }
+        }).then(products => {
+            let cartProducts = products.map(dbProduct => {
+                let quantity = req.session.cart.find(cartProduct=>cartProduct.id==dbProduct.id).quantity
+                let totalPrice = dbProduct.price * quantity;
+                return {
+                    id: dbProduct.id,
+                    name: dbProduct.name,
+                    quantity: quantity,
+                    image: dbProduct.image,
+                    price: dbProduct.price,
+                    totalPrice: totalPrice
+                }
+            });
+
+            let grandTotal = 0;
+            for (i = 0; i < cartProducts.length; i++){
+                grandTotal += cartProducts[i].totalPrice
+            }
+            
+            let totals = {
+                grandTotal: grandTotal,
+            }
+           
+            res.json({
+                quantity: cartItem.quantity,
+                totalPrice: cartProducts.find(e => e.id == productId).totalPrice,
+                grandTotal: grandTotal,
+            });
+        });
+    },
+
+    removeItemFromCart: (req, res) => {
+        if (!req.session.cart) {
+            req.session.cart = []
+        }
+        let productId = req.query.productId;
+        let index = req.session.cart.findIndex(e => e.id == productId);
+        req.session.cart.splice(index, 1);        
+        let productIds = req.session.cart.map(x => parseInt(x.id));
+        db.Product.findAll({
+            include: ['image', 'brand', 'category'],
+            where: {
+                id: {
+                    [Op.in]: productIds
+                }
+            }
+        }).then(products => {
+            let cartProducts = products.map(dbProduct => {
+                let quantity = req.session.cart.find(cartProduct=>cartProduct.id==dbProduct.id).quantity
+                let totalPrice = dbProduct.price * quantity;
+                return {
+                    id: dbProduct.id,
+                    name: dbProduct.name,
+                    quantity: quantity,
+                    image: dbProduct.image,
+                    price: dbProduct.price,
+                    totalPrice: totalPrice
+                }
+            });
+
+            let grandTotal = 0;
+            for (i = 0; i < cartProducts.length; i++){
+                grandTotal += cartProducts[i].totalPrice
+            }
+           
+            res.json({
+                grandTotal: grandTotal,
+            });
+        });
+    },
+    clearCart:(req, res)=>{
+        req.session.cart = [];
+        res.send();
+    },
 }
 module.exports = controller;

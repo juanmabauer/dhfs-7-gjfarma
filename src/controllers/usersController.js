@@ -46,7 +46,11 @@ let controller = {
 		res.render('users/profile', { user: req.session.userLogged, isAdmin: req.session.isAdmin })
 	},
 	login: (req, res) => {
-		res.render('users/login');
+		var redirectTo = "/";
+		if (req.query.redirectTo){
+			redirectTo = req.query.redirectTo;
+		}
+		res.render('users/login', {redirectTo: redirectTo});
 	},
 	processLogin: async (req, res) => {
 		let userToLogin = await db.User.findOne({ where: { email: req.body.email }, include: ['rol'] });
@@ -61,8 +65,11 @@ let controller = {
 				if (req.body.remember) {
 					res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 })
 				}
-
-				res.redirect('/');
+				var redirectTo = "/";
+				if (req.query.redirectTo){
+					redirectTo = req.query.redirectTo;
+				}
+				res.redirect(redirectTo);
 				return;
 			}
 			return res.render('users/login', {

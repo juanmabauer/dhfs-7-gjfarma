@@ -20,6 +20,9 @@ const validations = require('../middlewares/addProductMiddleware');
 const upload = multer ({storage});
 
 router.get('/cart', authMiddleware, controller.cart);
+router.get('/addToCart', controller.addToCart);
+router.get('/removeItemFromCart', controller.removeItemFromCart);
+router.get('/clearCart', controller.clearCart);
 
 router.get('/detail/:id', controller.detail);
 

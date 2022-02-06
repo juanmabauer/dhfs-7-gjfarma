@@ -74,12 +74,14 @@ thead {
 .empty-cart {
     padding: 10px;
 }
-.empty-cart a {
+.empty-cart button {
     background-color: #e35f21;
     color: #eef8f7;
     border-radius: 15px;
     padding: 5px;
     font-size: 14px;
+    cursor: pointer;
+    border: none;
 }
 
 .cart-resume {
@@ -142,6 +144,9 @@ thead {
     cursor: pointer;
 }
 
+td a{
+    color: black;
+}
 
 .main-container{
     background-color: var(--color-white-cold);

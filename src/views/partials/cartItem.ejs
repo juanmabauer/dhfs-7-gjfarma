@@ -1,20 +1,20 @@
-<tr>
+<tr id="product-<%= product.id %>">
     <td class="td-img">
-        <a href="/products/product">
-            <img src="/images/products/belleza-labial.png" alt="">
+        <a href="/products/detail/<%= product.id %>">
+            <img src="/images/products/<%= product.image?.name ?? "default-image-product.jpg" %>" alt="">
         </a>
     </td>
     <td>
-        <a href="/products/product">
-            Nombre del producto
+        <a href="/products/detail/<%= product.id %>">
+           <%= product.name %> 
         </a>
     </td>
-    <td>$xxx,xx</td>
+    <td><%= product.price %> </td>
     <td class="quanty">
-        <div><a href="#"><i class="fas fa-minus"></i></a></div>
-        <div>1</div>
-        <div><a href="#"><i class="fas fa-plus"></i></a></div>
+        <div><button onclick="addToCart('<%=product.id%>', -1)" class="cartQuantityButton"><i class="fas fa-minus"></i></button></div>
+        <div id="productQuantity-<%=product.id%>"><%= product.quantity %> </div>
+        <div><button onclick="addToCart('<%=product.id%>', 1)" class="cartQuantityButton"><i class="fas fa-plus"></i></button></div>
     </td>
-    <td>$xxx,xx</td>
-    <td><i class="far fa-trash-alt"></i></td>
+    <td id="productTotalPrice-<%=product.id%>"><%= product.totalPrice %> </td>
+    <td><button onclick="removeItemFromCart('<%=product.id%>')" class="removeItemButton"><i class="far fa-trash-alt"></i></button></td>
 </tr>

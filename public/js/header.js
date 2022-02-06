@@ -7,7 +7,7 @@ window.onload = function () {
   });
   var searchBar = document.querySelector('.search-bar');
 
-  //I'm using "click" but it works with any event
+
   document.addEventListener('click', function (event) {
     var isClickInside = searchBar.contains(event.target);
 
@@ -41,7 +41,7 @@ function search() {
     fetch('/api/products/search?searchString=' + searchString)
       .then(response => response.json())
       .then(data => {
-        if (data.length > 0){
+        if (data.length > 0) {
           document.querySelector('.searchTerm').classList.add("searchOpen");
           document.querySelector('.searchButton').classList.add("searchOpen");
           data.forEach(productHTML => {
@@ -52,7 +52,7 @@ function search() {
   }
 }
 
-function closeSearchBar(){
+function closeSearchBar() {
   let searchResults = document.querySelector('.search-results');
   searchResults.innerHTML = '';
   document.querySelector('.searchTerm').classList.remove("searchOpen");

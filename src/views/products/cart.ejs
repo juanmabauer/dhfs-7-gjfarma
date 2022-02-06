@@ -21,16 +21,18 @@
                                                 <th>Eliminar</th>
                                             </tr>
                                         </thead>
-                                        <%- include('../partials/cartItem') %>
-                                        <%- include('../partials/cartItem') %>
-                                        <%- include('../partials/cartItem') %>
+                                        <tbody id="cartItems">
+                                            <%cartProducts.forEach(product=>{%>
+                                                <%- include('../partials/cartItem',{product}) %>
+                                            <%   })%>
+                                        </tbody>
                                     </table>
                                     <div class="bottom-options">
                                         <div class="keepbuying">
                                             <a href="/" class="link-keepbuying">Seguir Comprando</a>
                                         </div>
                                         <div class="empty-cart">
-                                            <a href="#" class="link-empty-cart">Vaciar carro</a>
+                                            <button onclick="clearCart()" class="link-empty-cart">Vaciar carro</button>
                                         </div>
                                     </div>
                                 </div>
@@ -49,8 +51,8 @@
                                         <div class="subtotal">
                                             <span>Subtotal</span>
                                         </div>
-                                        <div class="amount-to-pay">
-                                            <span>$xxx,xx</span>
+                                        <div class="amount-to-pay grandTotal">
+                                            <span>$ <%=totals.grandTotal %></span>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -58,15 +60,15 @@
                                             <span>Envío</span>
                                         </div>
                                         <div class="amount-to-pay">
-                                            <span>$xxx,xx</span>
+                                            <span>GRATIS!</span>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="total">
                                             <span>Total</span>
                                         </div>
-                                        <div class="amount-to-pay">
-                                            <span>$xxx,xx</span>
+                                        <div class="amount-to-pay grandTotal">
+                                            <span>$ <%=totals.grandTotal %></span>
                                         </div>
                                     </div>
                                     <button type="submit" class="finish-purchease">FINALIZAR COMPRA</button>
