@@ -30,21 +30,12 @@
                                 </div>
                             </article>
                             <div class="buy-button">
-                                <div class="quantity">
-                                    <div class="decrease">
-                                        <button class="subtract">-</button>
-                                    </div>
-                                    <div class="amount">1</div>
-                                    <div class="increase">
-                                        <button class="add-prod">+</button>
-                                    </div>
-                                </div>
-                                <a href="/products/cart">
+                                <button onclick="addToCart('<%=product.id %>')">
                                     <div class="add-to-cart">
                                         <div class="add-product">Agregar</div>
                                         <i class="fas fa-shopping-cart"></i>
                                     </div>
-                                </a>
+                                </button>
                             </div>
                             <div class="extra-links">
                                 <a href="#">

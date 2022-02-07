@@ -11,7 +11,7 @@ function addToCart(productId, quantity) {
                     document.getElementById("product-" + productId).remove();
                 } else {
                     document.getElementById("productQuantity-" + productId).innerHTML = data.quantity;
-                    document.getElementById("productTotalPrice-" + productId).innerHTML = data.totalPrice;
+                    document.getElementById("productTotalPrice-" + productId).innerHTML = "$ " + data.totalPrice;
                 }
                 for (i = 0; i < totals.length; i++) {
                     totals[i].innerHTML = "$ " + data.grandTotal;

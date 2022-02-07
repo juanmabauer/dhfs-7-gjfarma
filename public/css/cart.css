@@ -204,3 +204,8 @@ td a{
         width: 100px;
     }
 }
+
+#cartItems button{
+    border: none;
+    cursor: pointer;
+}

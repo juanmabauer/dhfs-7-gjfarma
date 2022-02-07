@@ -82,10 +82,10 @@
     cursor: pointer;
 }
 
-.buy-button a {
+.buy-button button {
   
     text-align: center;
-    width: 75%;
+    width: 100%;
     background-color: var(--color-black);
     display: flex;
 }

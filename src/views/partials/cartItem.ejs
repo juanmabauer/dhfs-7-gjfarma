@@ -9,12 +9,12 @@
            <%= product.name %> 
         </a>
     </td>
-    <td><%= product.price %> </td>
+    <td>$ <%= product.price %> </td>
     <td class="quanty">
         <div><button onclick="addToCart('<%=product.id%>', -1)" class="cartQuantityButton"><i class="fas fa-minus"></i></button></div>
         <div id="productQuantity-<%=product.id%>"><%= product.quantity %> </div>
         <div><button onclick="addToCart('<%=product.id%>', 1)" class="cartQuantityButton"><i class="fas fa-plus"></i></button></div>
     </td>
-    <td id="productTotalPrice-<%=product.id%>"><%= product.totalPrice %> </td>
+    <td id="productTotalPrice-<%=product.id%>">$ <%= product.totalPrice %> </td>
     <td><button onclick="removeItemFromCart('<%=product.id%>')" class="removeItemButton"><i class="far fa-trash-alt"></i></button></td>
 </tr>

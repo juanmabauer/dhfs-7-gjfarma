@@ -54,7 +54,10 @@ let controller = {
 	},
 	processLogin: async (req, res) => {
 		let userToLogin = await db.User.findOne({ where: { email: req.body.email }, include: ['rol'] });
-
+		var redirectTo = "/";
+		if (req.query.redirectTo){
+			redirectTo = req.query.redirectTo;
+		}
 		if (userToLogin) {
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
 			if (isOkThePassword) {
@@ -65,10 +68,7 @@ let controller = {
 				if (req.body.remember) {
 					res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 })
 				}
-				var redirectTo = "/";
-				if (req.query.redirectTo){
-					redirectTo = req.query.redirectTo;
-				}
+				
 				res.redirect(redirectTo);
 				return;
 			}
@@ -77,7 +77,8 @@ let controller = {
 					password: {
 						msg: 'Contraseña incorrecta'
 					}
-				}
+				},
+				redirectTo: redirectTo
 			});
 		}
 
@@ -86,7 +87,8 @@ let controller = {
 				email: {
 					msg: 'No se encuentra este email en nuestra base de datos'
 				}
-			}
+				},
+				redirectTo: redirectTo
 		});
 	},
 	logout: (req, res) => {
