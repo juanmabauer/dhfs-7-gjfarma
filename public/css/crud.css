@@ -87,14 +87,14 @@
     color:black;
     background-color: rgb(12, 158, 12);
     border-radius: 10px;
-    width: 20%;
+    width: 30%;
     padding: 3px;
 }
 .delete-product{
     color:black;
     background-color: rgb(209, 9, 9);
     border-radius: 10px;
-    width: 20%;
+    width: 30%;
     padding: 3px;
 }
 .fa-edit, .fa-trash-alt {

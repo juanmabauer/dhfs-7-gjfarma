@@ -23,6 +23,8 @@ ul{
     --color-orange: #e35f21;
     --color-light-orange: #faab05;
     --color-white-cold: #e6e6e6;
+    --color-inactivo: #5f5050;
+    --color-hover: #ffa400;
 }
 
 .wrapper-container{

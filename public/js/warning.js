@@ -21,11 +21,3 @@ formDelete.forEach(productDelete => {
           });
     })
 })
-
-function showSuccessMessage(message){
-  swal({
-    title: message,
-    icon: "success",
-    buttons: false,
-  });
-}

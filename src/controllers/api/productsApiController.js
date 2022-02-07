@@ -4,7 +4,7 @@ const ejs = require("ejs");
 
 const productsApiController = {
     'list': (req, res) => {
-        db.Product.findAll({ include: ['image', 'brand', 'category'] })
+        db.Product.findAll({include: ['image', 'brand', 'category'] })
         .then(products => {
             let respuesta = {
                 meta: {

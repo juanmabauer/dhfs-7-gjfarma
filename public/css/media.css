@@ -1,6 +1,11 @@
 @media (min-width: 761px) {
+
+    .search-bar{
+        flex-wrap: wrap;
+    }
     .product{
         width:24%;
+        margin: 0.5% 0.5%;
     }
     .burger-menu{
         display: none;
@@ -8,21 +13,21 @@
     nav{
         display: block;
     }
+    .my-cart{
+        margin-right: 15px;
+    }
     .my-order{
         display: block;
     }
     .logo img{
         display:block ; 
+        margin-left: 15px;
     }
     .footer{
         font-size: 16px;
     }
     .wrapper-container-footer{
         display: flex;
-    }
-
-    .product{
-        margin: 0.5% 0.5%;
     }
     .prevNext a {
         width: 60px;
@@ -33,5 +38,10 @@
         width:       30px;
         height:      30px;
         line-height: 30px;
+    }
+}
+@media (min-width: 1100px) {
+    .logo img{
+        margin-left: 0;
     }
 }

@@ -49,5 +49,17 @@ function clearCart(){
         }
         document.getElementById("cartItems").innerHTML = "";
     });
+};
+
+function finishPurchease(){
+    fetch('/products/finishPurchease')
+    .then(data => {
+        var totals = document.getElementsByClassName("grandTotal");
+        for (i = 0; i < totals.length; i++) {
+            totals[i].innerHTML = "$ 0";
+        }
+        showSuccessMessage("Gracias por su compra")
+        document.getElementById("cartItems").innerHTML = "";
+    });
 }
 

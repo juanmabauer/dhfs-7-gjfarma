@@ -3,7 +3,7 @@
     font-weight: bold;
 }
 .profile{
-    width: 400px;
+    width: 90%;
     background: var(--color-white-cold); 
     margin: auto;
     margin-top: 10px;
@@ -40,5 +40,27 @@
   .button-box{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    width: 300px;
+    margin-left: -10px;
+  }
+  .logout{
+    width: 32%;
+  }
+  .dashboard{
+    width: 28%;
+  }
+  .crud{
+    width: 40%;
+  }
+  @media (min-width: 761px){
+    .profile{
+      width: 400px;
+    }
+    .button-box{
+      flex-wrap: nowrap;
+      width: 100%;
+      margin-left: 0;
+    }
   }
   

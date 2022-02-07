@@ -45,7 +45,7 @@ thead {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 45px;
+    margin-top: 35px;
 }
 .fa-minus{
     color: #2e2e2e;
@@ -69,7 +69,7 @@ thead {
     color: #eef8f7;
     border-radius: 15px;
     padding: 5px;
-    font-size: 14px;
+    font-size: 16px;
 }
 .empty-cart {
     padding: 10px;
@@ -79,7 +79,7 @@ thead {
     color: #eef8f7;
     border-radius: 15px;
     padding: 5px;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
     border: none;
 }
@@ -192,6 +192,9 @@ td a{
     }
     .cart-resume .finish-purchease {
         width: 55%;
+    }
+    .quanty{
+        margin-top: 42px;
     }
 }
 

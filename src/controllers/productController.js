@@ -284,5 +284,9 @@ let controller = {
         req.session.cart = [];
         res.send();
     },
+    finishPurchease:(req, res)=>{
+        req.session.cart = [];
+        res.send();
+    }
 }
 module.exports = controller;

@@ -62,22 +62,22 @@
                                 <input type="text" name="stock" id="stock"
                                     class="<%= locals.errors && errors.stock ? 'is-invalid' : null %>"
                                     value="<%= locals.oldData ? oldData.stock : null %>">
-                                <% if (locals.errors && errors.stock) { %>
-                                    <div class="text-danger">
+                                    <div class="text-danger" id="stockerror">
+                                        <% if (locals.errors && errors.stock) { %>
                                         <%= errors.stock.msg %>
+                                        <% } %>
                                     </div>
-                                    <% } %>
                             </div>
                             <div class="form-unitary">
                                 <label for="product price">Precio unitario</label>
                                 <input type="text" name="price" id="product_price"
                                     class="<%= locals.errors && errors.price ? 'is-invalid' : null %>"
                                     value="<%= locals.oldData ? oldData.price : null %>">
-                                <% if (locals.errors && errors.price) { %>
-                                    <div class="text-danger">
+                                    <div class="text-danger" id="priceerror">
+                                        <% if (locals.errors && errors.price) { %>
                                         <%= errors.price.msg %>
+                                        <% } %>
                                     </div>
-                                <% } %>
                             </div>
                         </div>
                     </div>

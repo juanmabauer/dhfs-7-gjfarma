@@ -4,6 +4,8 @@ window.onload= function (){
     let name = document.querySelector('#product_name');
     let description = document.querySelector('#description');
     let image = document.querySelector('#img');
+    let stock = document.querySelector('#stock');
+    let price = document.querySelector('#product_price');
    
     function showError(selector, message){
         document.querySelector(selector).innerText = message;
@@ -32,6 +34,20 @@ window.onload= function (){
         }else{
             showError('#imageerror', "")
             delete errors.image;
+        }
+        if(stock.value.length < 1 ){
+            errors.stock =("Debes ingresar un stock")
+            showError('#stockerror', errors.stock)
+        }else{
+            showError('#stockerror', "")
+            delete errors.stock;
+        }
+        if(price.value.length < 1 ){
+            errors.price =("Debes ingresar un precio")
+            showError('#priceerror', errors.price)
+        }else{
+            showError('#priceerror', "")
+            delete errors.price;
         }
         if( Object.keys(errors).length==0){
             formulario.submit();
