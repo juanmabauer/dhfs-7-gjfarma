@@ -34,6 +34,9 @@ module.exports = {
     faq:(req,res)=>{
         res.render('general/faq')
     },
+    pickup:(req,res)=>{
+        res.render('general/pickup')
+    },
     contact:(req,res)=>{
         res.render('general/contact')
     }, aboutus:(req,res)=>{

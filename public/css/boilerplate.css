@@ -1,4 +1,4 @@
-.faq{
+.faq, .pickup{
     margin: 15px 0;
 }
 .contact-us{
@@ -26,3 +26,14 @@
 .workwithus{
     margin: 15px;
 }
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    /* The width is the width of the web page */
+  }

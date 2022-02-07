@@ -58,3 +58,26 @@ function closeSearchBar() {
   document.querySelector('.searchTerm').classList.remove("searchOpen");
   document.querySelector('.searchButton').classList.remove("searchOpen");
 }
+
+function initMap() {
+  //Declara un [] de objetos como los de abajo
+  const pickUpPoints = [
+    {lat: -34.5511783, lng: -58.4526966},
+    {lat: -34.7440431, lng: -58.3245274},
+    {lat: -34.8908592, lng: -57.9823208},
+    {lat: -34.7438134, lng: -58.3900559},
+    {lat: -34.4991616, lng: -58.590468},
+  ]
+  let map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 10,
+    center: pickUpPoints[0],
+  })
+  for(let i= 0; i < pickUpPoints.length; i++){
+    const marker = new google.maps.Marker({
+      position: pickUpPoints[i],
+      map: map,
+    })
+  }
+  
+ ;
+}
